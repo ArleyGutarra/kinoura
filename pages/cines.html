@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinoura | Cines</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="../assets/logo.png" alt="logo del sitio web kinoura">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Kinoura</a></li>
+                <li><a href="#">Cines</a></li>
+                <li><a href="./peliculas.html">Películas</a></li>
+                <li><a href="./promociones.html">Promociones</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cinemas-container">
+            <h1>Cines</h1>
+            <p>Ordenar por:</p>
+            <div class="horizontal-filter">
+                <form>
+                    <input type="radio" id="sort-rating" name="sort-by" value="rating">
+                    <label for="sort-rating">Popularidad</label>
+                    <input type="radio" id="sort-price" name="sort-by" value="price">
+                    <label for="sort-price">Precio</label>
+                    <input type="radio" id="sort-nearby" name="sort-by" value="nearby">
+                    <label for="sort-nearby">Cercanía</label>
+                </form>
+            </div>
+
+            <p>Filtros:</p>
+            <div class="side-filter">
+                <p>Cadena:</p>
+                <form>
+                    <input type="radio" id="cineplanet" name="cinema-chain" value="cineplanet">
+                    <label for="cineplanet">Cineplanet</label>
+                    <input type="radio" id="cinemark" name="cinema-chain" value="cinemark">
+                    <label for="cinemark">Cinemark</label>
+                    <input type="radio" id="cinepolis" name="cinema-chain" value="cinepolis">
+                    <label for="cinepolis">Cinepolis</label>
+                </form>
+                
+                <p>Ciudad:</p>
+                <form>
+                    <input type="radio" id="lima" name="city" value="lima">
+                    <label for="lima">Lima</label>
+                    <input type="radio" id="trujillo" name="city" value="trujillo">
+                    <label for="trujillo">Trujillo</label>
+                    <input type="radio" id="cuzco" name="city" value="cuzco">
+                    <label for="cuzco">Cuzco</label>
+                </form>
+
+                <form>
+                    <label for="price">Precio:</label>
+                    <input type="range" id="price" name="price" min="1" max="70">
+                </form>
+            </div>
+
+            <div class="cinemas">
+                <div class="cinema-card">
+                    <img src="../assets/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="cinema-card">
+                    <img src="../assets/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="cinema-card">
+                    <img src="../assets/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="cinema-card">
+                    <img src="../assets/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="cinema-card">
+                    <img src="../assets/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="cinema-card">
+                    <img src="../assets/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+            </ul>
+        </nav>
+        <p>Kinoura &copy Perú 2026. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
