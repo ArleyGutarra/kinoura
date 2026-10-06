@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinoura | Películas</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar-container">
+            
+            <ul class="navbar">
+                <img class="logo" src="../assets/movie-posters/spiderman_brand-new-day.jfif"logo.png" alt="logo del sitio web kinoura">
+                <li class="navbar__item"><a href="../index.html">Kinoura</a></li>
+                <li class="navbar__item"><a href="./cines.html">Cines</a></li>
+                <li class="navbar__item"><a href="#">Películas</a></li>
+                <li class="navbar__item"><a href="./promociones.html">Promociones</a></li>
+                <li class="navbar__item"><a href="./nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="movies-container">
+            <h1>Películas</h1>
+            <div class="movies-tabs">
+                <button class="movies-tabs__buttons" type="button">En cartelera</button>
+                <button class="movies-tabs__buttons" type="button">Próximos estrenos</button>
+                <button class="movies-tabs__buttons" type="button">Preventa</button>
+            </div>
+
+            <div class="movies-and-filters">
+                <div class="movies-and-filters__filter-container">
+                    <p>Filtros:</p>
+                    <div class="side-filter">
+                        <form>
+                            <p>Cadena:</p>
+                            <input type="radio" id="cineplanet" name="cinema-chain" value="cineplanet">
+                            <label for="cineplanet">Cineplanet</label>
+
+                            <input type="radio" id="cinemark" name="cinema-chain" value="cinemark">
+                            <label for="cinemark">Cinemark</label>
+
+                            <input type="radio" id="cinepolis" name="cinema-chain" value="cinepolis">
+                            <label for="cinepolis">Cinepolis</label>
+                        </form>
+
+                        <form>
+                            <p>Ciudad:</p>
+                            <input type="radio" id="lima" name="city" value="lima">
+                            <label for="lima">Lima</label>
+
+                            <input type="radio" id="trujillo" name="city" value="trujillo">
+                            <label for="trujillo">Trujillo</label>
+
+                            <input type="radio" id="cuzco" name="city" value="cuzco">
+                            <label for="cuzco">Cuzco</label>
+                        </form>
+
+                        <form class="side-filter__date ">
+                            <label for="screening-date">Fecha:</label>
+                            <input type="date" name="screening-date" id="screening-date">
+                        </form>
+
+                        <form class="side-filter__price">
+                            <label for="price">Precio:</label>
+                            <input type="range" id="price" name="price" min="1" max="70">
+                        </form>
+                    </div> 
+                </div>
+
+                <div class="movies-and-filters__movies">
+                    <div class="movie-card">
+                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif" alt="portada de la película X">
+                        <h2>Película X</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+
+                    <div class="movie-card">
+                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif"pelicula_2.jpg" alt="portada de la película X">
+                        <h2>Película X</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+
+                    <div class="movie-card">
+                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif"pelicula_3.jpg" alt="portada de la película X">
+                        <h2>Película X</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+
+                    <div class="movie-card">
+                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif"pelicula_2.jpg" alt="portada de la película X">
+                        <h2>Película X</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+
+                    <div class="movie-card">
+                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif"pelicula_3.jpg" alt="portada de la película X">
+                        <h2>Película X</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif" alt="portada de la película X">
+                        <h2>Película X</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="footer_links-list">
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+            </ul>
+        </nav>
+        <p class="footer__copyright">Kinoura &copy Perú 2026. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

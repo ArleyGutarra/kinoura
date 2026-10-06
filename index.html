@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinoura</title>
+    <link rel="stylesheet" href="./styles/styles.css"> 
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-container">
+            
+            <ul class="navbar">
+                <img class="logo" src="assets/logo.png" alt="logo del sitio web kinoura">
+                <li class="navbar__item"><a href="./">Kinoura</a></li>
+                <li class="navbar__item"><a href="./pages/cines.html">Cines</a></li>
+                <li class="navbar__item"><a href="./pages/peliculas.html">Películas</a></li>
+                <li class="navbar__item"><a href="./pages/promociones.html">Promociones</a></li>
+                <li class="navbar__item"><a href="./pages/nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner">
+            <img src="./assets/banners/banner-doomsday.webp" alt="Baner publicitando el re-estreno de Avengers Endgame">
+        </div>
+
+<!-- Q? un h1 va dentro o fuera de un section?? -->
+        <section class="movies-container-home">
+            <h1>Películas</h1>
+            <!-- 
+            Estos son controles NO para cambiar de página, sino para mostrar contenido
+            (las películas) de manera dinámica dependiendo de la selección del usuario 
+            -->
+            <div class="movies-tabs">
+                <button class="movies-tabs__buttons" type="button">En cartelera</button>
+                <button class="movies-tabs__buttons" type="button">Próximos estrenos</button>
+                <button class="movies-tabs__buttons" type="button">Preventa</button>
+            </div>
+
+            <!-- 
+            En esta sección, dependiendo del botón (tab) seleccionado, se debería cambiar
+            cambiar las películas que se muestren, pero la estructura sería la misma.
+            -->
+            <div class="movies-display">
+                <ul>
+                    <li class = "movies-display__card"><img src="assets/movie-posters/avengers-endgame.jfif" alt="póster de la película Avengers: Endgame"></li>
+                    <li class = "movies-display__card"><img src="assets/movie-posters/spiderman_brand-new-day.jfif" alt="póster de la película Spiderman: Brand New Day"></li>
+                    <li class = "movies-display__card"><img src="assets/movie-posters/madoka-magica.jfif" alt="póster de la película Puella Magi Madoka Magica: Walpurgisnacht Rising"></li>
+                    <li class = "movies-display__card"><img src="assets/movie-posters/verity.jfif" alt="póster de la Verity: La Sombra de un Engaño"></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="footer_links-list">
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+            </ul>
+        </nav>
+        <p class="footer__copyright">Kinoura &copy Perú 2026. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
+<!-- ERRORS -->
+<!-- 
+1. Colocar lang = "es" en <meta> y no <html>
+2. Olvidarse del <meta name="viewport" content="width=device-width, initial-scale=1.0">
+3. <head> dentro del <main> XD
+4. Confundí <head> con <header> XD (se ve en la línea anterior :"v)
+-->
+
+
