@@ -17,13 +17,6 @@ red: #dd0000
     --color-accent: #e53935;
 }
 
-:root {
-    --color-primary: #7f211e;
-    --color-secondary: #...;
-    --color-background: #...;
-    --color-text: #...;
-}
-
 /* GENERAL */
 * {
     margin: 0;
@@ -38,12 +31,14 @@ body {
 
 /*      NAVBAR      */
 .logo {
-    height: 5rem;
+    height: 3.5rem;
+    padding: 15px 0px;
 }
 
 .navbar-container {
-    background-color: #000;
-    /* position: sticky; -- revisar cómo aplicar esto*/
+    background-color: var(--color-background);
+    border-bottom: #888 solid 1.5px;
+    margin-bottom: 30px;
 }
 
 .navbar {
@@ -255,7 +250,6 @@ footer {
 .cinema-card {
     display: inline-block;
     width: 45%;
-    /* border: #f00 solid 2px; */
     margin-bottom: 60px;
 }
 
@@ -267,13 +261,13 @@ footer {
 /* --------------- PELICULAS --------------- */
 /* ----------------------------------------- */
 
-.movies-container {
+.movies-container, .promotions-container {
     width: 80vw;
     margin: auto;
     margin-top: 30px;
 }
 
-.movies-container h1{
+.movies-container h1, .promotions-container h1{
     font-size: 3rem;
     padding: 10px 0;
 }
@@ -289,8 +283,7 @@ footer {
 }
 
 /* Filters and Movies display*/
-
-.movies-and-filters {
+.movies-and-filters, .promotions-and-filters {
     font-size: 0;
 }
 
@@ -302,7 +295,7 @@ footer {
 }
 
 /* Filters */
-.movies-and-filters__filter-container {
+.movies-and-filters__filter-container{
     box-sizing: border-box;
     width: 20%;
 }
@@ -320,6 +313,7 @@ footer {
     padding-bottom: 5px;
 }
 
+/* Movies */
 .movies-and-filters__movies {
     border-left: #888 solid 1.5px;
     box-sizing: border-box;
@@ -331,7 +325,6 @@ footer {
 .movie-card {
     display: inline-block;
     width: 30%;
-    /* border: #f00 solid 2px; */
     margin: 0px 10px 60px 10px;
     border-radius: 10px;
     background-color: var(--color-surface);
@@ -352,11 +345,165 @@ footer {
 /* -------------- PROMOCIONES -------------- */
 /* ----------------------------------------- */
 
+.promotions-and-filters__filter-container, .promotions-and-filters__promotions {
+    display: inline-block;
+    padding-top: 10px;
+    vertical-align: top;
+    font-size: 1rem;   
+}
 
+/* Filters */
+.promotions-and-filters__filter-container {
+    box-sizing: border-box;
+    width: 20%;
+}
 
+.promotions-and-filters__promotions {
+    border-left: #888 solid 1.5px;
+    box-sizing: border-box;
+    width: 80%;
+    padding-top: 40px;
+    text-align: center;
+}
 
+.promotions-and-filters__filter-container > p {
+    font-size: 1.2rem;
+    margin: 0 15px 15px 0;
+    padding: 10px 0;
+    border-bottom: #888 solid 1px;
+    font-weight: 600;
+}
 
+/* Promotions */
+.promotions-container h1 {
+    padding-bottom: 20px;
+    border-bottom: #888 solid 1.5px;
+}
+
+.promotion-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    margin-bottom: 30px;
+}
+
+.promotion-card img {
+    width: 80%;
+    border: #aaa solid 1px;
+    margin-bottom: 10px;
+}
+
+.promotion-card h2, .promotion-card p {
+    width: 80%;
+    margin: auto;
+}
 
 /* ----------------------------------------- */
 /* ---------------- NOSOTROS --------------- */
 /* ----------------------------------------- */
+.about-container {
+    width: 80vw;
+    margin: auto;
+    margin-top: 50px;
+}
+
+/* BANNER */
+.about-title {
+    font-size: 3rem;
+    margin-left: 10vw;
+}
+
+.about-container__banner {
+    height: 60vh;
+    background-image: url(../assets/about/banner-about.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #000;
+    text-align: center;
+}
+
+.slogan-about {
+    line-height: 60vh;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+
+/* CONTENT */
+.about-container h2{
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.about-section {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: #888 solid 1px;
+    font-size: 0;
+}
+
+/* Section with Image to the right */
+.section-right img{
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    border: #aaa solid 1px;
+    margin: 0 0 0 40px;
+    padding: 0;
+    width: 30%;
+}
+
+.section-right .about-description {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: justify;
+    width: 60%;
+    font-size: 1rem;
+}
+
+
+/* Section with Image to the left */
+.section-left img{
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    border: #aaa solid 1px;
+    margin: 0 40px 0 0;
+    padding: 0;
+    width: 32%;
+}
+
+.section-left .about-description {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: end;
+    width: 60%;
+    font-size: 1rem;
+}
+
+/* Team */
+.team-cards-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.team-member-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 0 20px;
+    font-size: 1rem;
+}
+
+.team-member-card p{
+    padding: 0 15px;
+}
+
+.team-member-card .bold {
+    font-weight: 600;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
