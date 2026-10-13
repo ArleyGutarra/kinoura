@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* font-family: "Montserrat", sans-serif; */
 
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search,person,notifications,tune');
 .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
@@ -38,7 +38,59 @@ header {
     top: 0; /* distance to the top (goes with position-sticky) */
     font-size: 1.2rem;
     border-bottom: var(--color-divider) solid 1px;
-    height: 70px; /* tmp */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-container {
+    display: flex;
+    width: 100%;
+    margin: 5px 30px;
+}
+
+.navbar__items-container {
+    display: flex;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 60;
+    color: #eee;
+}
+
+.navbar__item{
+    box-sizing: border-box;
+    height: 52px;
+    text-decoration: none;
+    padding: 14px 12px;
+}
+
+.navbar__item a {
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: 450;
+    color: #bbb;
+}
+
+.navbar__item:hover {
+    background-color: #444;
+    border-bottom: #fff solid 2px;
+}
+
+.navbar__logo img{
+    height: 2.2rem;
+    padding: 0.5rem 0.8rem 0.5rem 0;
+}
+
+.navbar__logo {
+    font-size: 0;
 }
 
 
@@ -127,6 +179,4 @@ main {
 .two-column-layout__sidefilter details input {
     margin: 8px; /* Separation of the checkbox */
 }
-
-
 

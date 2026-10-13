@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout - Flex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search,person,notifications,tune" rel="stylesheet" />
     <link rel="stylesheet" href="styles-flex.css">
 </head>
 <body>
     <header>
-        <nav>NAVBAR</nav>
+        <nav class="navbar-container">
+            <ul class="navbar">
+                <!-- El logo-link tiene un padding (o margin) medio raro que no me gusta-->
+                <div class="navbar__items-container">
+                    <li class="navbar__logo"><a href="#"><img src="../assets/logo.png" alt="logo del sitio web kinoura y enlace a la página principal"></a></li>
+                    <li class="navbar__item"><a href="./pages/cines.html">Cines</a></li>
+                    <li class="navbar__item"><a href="./pages/peliculas.html">Películas</a></li>
+                    <li class="navbar__item"><a href="./pages/promociones.html">Promociones</a></li>
+                    <li class="navbar__item"><a href="./pages/nosotros.html">Nosotros</a></li>
+                </div>
+
+                <div class="navbar__items-container">
+                    <span class="material-symbols-outlined">search</span>
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+            </ul>            
+        </nav>
     </header>
     <main>
         <div class="two-column-layout__container">

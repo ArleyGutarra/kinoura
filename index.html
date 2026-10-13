@@ -10,15 +10,21 @@
 <body>
     <header>
         <nav class="navbar-container">
-            
             <ul class="navbar">
-                <img class="logo" src="assets/logo.png" alt="logo del sitio web kinoura">
-                <li class="navbar__item"><a href="#">Kinoura</a></li> <!--OBS: Fuera del live server, esto te lleva a la carpeta ROOT, NO hace que accedas a index.html estando en index.html-->
-                <li class="navbar__item"><a href="./pages/cines.html">Cines</a></li>
-                <li class="navbar__item"><a href="./pages/peliculas.html">Películas</a></li>
-                <li class="navbar__item"><a href="./pages/promociones.html">Promociones</a></li>
-                <li class="navbar__item"><a href="./pages/nosotros.html">Nosotros</a></li>
-            </ul>
+                <div class="navbar__items-container">
+                    <li class="navbar__logo"><a href="#"><img src="../assets/logo.png" alt="logo del sitio web kinoura y enlace a la página principal"></a></li>
+                    <li class="navbar__item"><a href="./pages/cines.html">Cines</a></li>
+                    <li class="navbar__item"><a href="./pages/peliculas.html">Películas</a></li>
+                    <li class="navbar__item"><a href="./pages/promociones.html">Promociones</a></li>
+                    <li class="navbar__item"><a href="./pages/nosotros.html">Nosotros</a></li>
+                </div>
+
+                <div class="navbar__items-container">
+                    <span class="material-symbols-outlined">search</span>
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+            </ul>            
         </nav>
     </header>
 
