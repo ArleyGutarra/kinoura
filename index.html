@@ -13,7 +13,7 @@
             
             <ul class="navbar">
                 <img class="logo" src="assets/logo.png" alt="logo del sitio web kinoura">
-                <li class="navbar__item"><a href="./">Kinoura</a></li>
+                <li class="navbar__item"><a href="#">Kinoura</a></li> <!--OBS: Fuera del live server, esto te lleva a la carpeta ROOT, NO hace que accedas a index.html estando en index.html-->
                 <li class="navbar__item"><a href="./pages/cines.html">Cines</a></li>
                 <li class="navbar__item"><a href="./pages/peliculas.html">Películas</a></li>
                 <li class="navbar__item"><a href="./pages/promociones.html">Promociones</a></li>
@@ -27,7 +27,7 @@
             <img src="./assets/banners/banner-doomsday.webp" alt="Baner publicitando el re-estreno de Avengers Endgame">
         </div>
 
-        <section class="movies-container-home">
+        <section class="home-movies-container">
             <h1>Películas</h1>
             <!-- 
             Estos son controles NO para cambiar de página, sino para mostrar contenido
@@ -35,20 +35,20 @@
             -->
             <div class="movies-tabs">
                 <button class="movies-tabs__buttons" type="button">En cartelera</button>
-                <button class="movies-tabs__buttons" type="button">Próximos estrenos</button>
                 <button class="movies-tabs__buttons" type="button">Preventa</button>
+                <button class="movies-tabs__buttons" type="button">Próximos estrenos</button>
             </div>
 
             <!-- 
             En esta sección, dependiendo del botón (tab) seleccionado, se debería cambiar
             cambiar las películas que se muestren, pero la estructura sería la misma.
             -->
-            <div class="movies-display">
+            <div class="home-movies-preview">
                 <ul>
-                    <li class = "movies-display__card"><img src="assets/movie-posters/avengers-endgame.jfif" alt="póster de la película Avengers: Endgame"></li>
-                    <li class = "movies-display__card"><img src="assets/movie-posters/spiderman_brand-new-day.jfif" alt="póster de la película Spiderman: Brand New Day"></li>
-                    <li class = "movies-display__card"><img src="assets/movie-posters/madoka-magica.jfif" alt="póster de la película Puella Magi Madoka Magica: Walpurgisnacht Rising"></li>
-                    <li class = "movies-display__card"><img src="assets/movie-posters/verity.jfif" alt="póster de la Verity: La Sombra de un Engaño"></li>
+                    <li class = "home-movies-preview__card"><img src="assets/movie-posters/avengers-endgame.jfif" alt="póster de la película Avengers: Endgame"></li>
+                    <li class = "home-movies-preview__card"><img src="assets/movie-posters/spiderman_brand-new-day.jfif" alt="póster de la película Spiderman: Brand New Day"></li>
+                    <li class = "home-movies-preview__card"><img src="assets/movie-posters/madoka-magica.jfif" alt="póster de la película Puella Magi Madoka Magica: Walpurgisnacht Rising"></li>
+                    <li class = "home-movies-preview__card"><img src="assets/movie-posters/verity.jfif" alt="póster de la Verity: La Sombra de un Engaño"></li>
                 </ul>
             </div>
         </section>

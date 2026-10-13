@@ -1,0 +1,132 @@
+/* Monserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Montserrat", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-background: #101000;
+    --color-surface: #2a2a2a;
+    --color-divider: #808080;
+    --color-primary: #7f211e;
+    --color-accent: #e53935;
+}
+
+/* ----------------------------------------- */
+/* ---------------- GLOBAL ----------------- */
+/* ----------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--color-background);
+    color: #fff;
+}
+
+/*      HEADER       */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0; /* distance to the top (goes with position-sticky) */
+    font-size: 1.2rem;
+    border-bottom: var(--color-divider) solid 1px;
+    height: 70px; /* tmp */
+}
+
+
+/*      FOOTER       */
+footer p{
+    background-color: var(--color-primary);
+    text-align: center;
+    height: 100px; /* tmp */
+}
+
+/*      MAIN       */
+main {
+    display: flex;
+    justify-content: center; /* this centers the two-column-layout container */
+}
+
+/*      TWO-COLUMN LAYOUT       */
+.two-column-layout__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1070px;
+}
+
+/* Heading */
+.two-column-layout__heading {
+    border-bottom: var(--color-divider) solid 1px;
+    padding: 20px 0;
+}
+
+.two-column-layout__heading h1 {
+    font-size: 3rem;
+}
+
+/* Filter and Content - Structure */
+.two-column-layout__sidefilter-content-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.two-column-layout__sidefilter {
+    width: 20%;
+    box-sizing: content-box;
+    padding-right: 20px;
+}
+
+.two-column-layout__content {
+    width: 80%;
+    border-left: var(--color-divider) solid 1px;
+    text-align: justify;
+}
+
+/* Filters */
+.sidefilter-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0 5px;
+    /* border-bottom: var(--color-divider) solid 1px; */
+}
+
+.two-column-layout__sidefilter p {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.two-column-layout__sidefilter details {
+    user-select: none;      /* Non-selectable element*/
+    border-bottom: var(--color-divider) solid 1px;
+    padding: 5px 0;
+    font-weight: 300;
+}
+
+.two-column-layout__sidefilter summary {
+    user-select: none; /* Non-selectable element*/
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+.two-column-layout__sidefilter details label {
+    display: block;
+    padding: 5px 0;
+}
+
+.two-column-layout__sidefilter details input {
+    margin: 8px; /* Separation of the checkbox */
+}
+
+
+

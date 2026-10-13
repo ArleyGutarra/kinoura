@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    font-size: 1.6rem;
+    height: 10vh;
+    width: 100vw;
+    text-align: center;
+    
+    display: table-cell;
+    vertical-align: middle;
+}
+
+main {
+    margin: 0;
+}
+
+.title {
+    background: #aaa;
+    height: 10vh;
+}
+
+.box {
+    height: 80vh;
+    font-size: 0;
+}
+
+.filters,
+.content {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    font-size: 1.2rem; 
+}
+
+.filters {
+    background-color: teal;
+    width: 20%;
+    color: #fff;
+}
+
+.content {
+    background-color: #911;
+    width: 80%;
+    color: #fff;
+}  

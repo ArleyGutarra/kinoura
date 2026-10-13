@@ -1,35 +1,51 @@
+/* --------------- IMPORTS- --------------- */
+
 /* Monserrat font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* font-family: "Montserrat", sans-serif; */
 
-/* Color Palette */
-/* 
-black (main): #12100d
-gray: #23211e
-dark-red: #7f211e
-red: #dd0000 
-*/
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+}
 
+/* -------------- VARIABLES --------------- */
+
+/* Color Palette */
 :root {
-    --color-background: #000000;
+    --color-background: #101000;
     --color-surface: #2a2a2a;
+    --color-divider: #808080;
     --color-primary: #7f211e;
     --color-accent: #e53935;
 }
 
-/* GENERAL */
+/* ----------------------------------------- */
+/* ---------------- GLOBAL ----------------- */
+/* ----------------------------------------- */
+
 * {
-    margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    margin: 0;
 }
 
 body {
+    background-color: var(--color-background);
     color: #fff;
-    background-color: #110;
+    font-family: "Montserrat", sans-serif;
 }
 
 /*      NAVBAR      */
+
+/* Refactor Opportunity!!! */
+/* NOTA: Evaluar refactorización del NAVBAR (menos DIVs, menos clases, menos código)*/
+header {
+    position: sticky;
+    top: 0;
+}
+
 .logo {
     height: 3.5rem;
     padding: 15px 0px;
@@ -65,70 +81,6 @@ body {
     text-decoration: none;
 }
 
-/* ----------------------------------------- */
-/* ------------------ HOME ----------------- */
-/* ----------------------------------------- */
-
-
-/*      BANNER      */
-.banner {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.banner img{
-    width: 1160px;
-    height: 400px;
-    border-radius: 15px;
-}
-
-
-/*      MOVIES (main)     */
-.movies-container-home {
-    width: 1160px;
-    font-family: inherit;
-    margin: auto;
-}
-
-.movies-container-home h1 {
-    font-size: 3rem;
-}
-
-/* Movie Tabs */
-.movies-tabs__buttons {
-    background: inherit;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 400;
-    border-style: none;
-    margin: 10px 10px;
-    padding: 10px 0px;
-}
-
-.movies-tabs button:hover {
-    border-bottom: 2px solid #fff;
-}
-
-/* Movies Display */
-.movies-display {
-    text-align: center;
-}
-
-.movies-display ul {
-    list-style-type: none;
-    display: block;
-}
-
-.movies-display__card {
-    display: inline;
-}
-
-.movies-display__card img {
-    width: 22%;
-    padding: 15px;
-}
-
 /*      FOOTER      */
 footer {
     background-color: var(--color-primary);
@@ -152,25 +104,178 @@ footer {
     margin-top: 20px;
 }
 
+/*      TWO-COLUMN LAYOUT       */
+.two-column-layout__container {
+    margin: auto;
+    max-width: 1070px;
+}
+
+/* Heading */
+.two-column-layout__heading {
+    border-bottom: var(--color-divider) solid 1px;
+    padding: 20px 0;
+}
+
+.two-column-layout__heading h1 {
+    font-size: 3rem;
+}
+
+/* Filter and Content - Structure */
+.two-column-layout__sidefilter-content-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.two-column-layout__sidefilter {
+    width: 20%;
+    box-sizing: content-box;
+    padding-right: 20px;
+}
+
+.two-column-layout__content {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    border-left: var(--color-divider) solid 1px;
+}
+
+/* Filters */
+.sidefilter-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0 5px;
+}
+
+.two-column-layout__sidefilter p {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.two-column-layout__sidefilter details {
+    user-select: none; /* Non-selectable element*/
+    border-bottom: var(--color-divider) solid 1px;
+    padding: 5px 0;
+    font-weight: 300;
+}
+
+.two-column-layout__sidefilter summary {
+    user-select: none; /* Non-selectable element*/
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+.two-column-layout__sidefilter details label {
+    display: block;
+    padding: 5px 0;
+}
+
+.two-column-layout__sidefilter details input {
+    margin: 8px; /* Separation of the checkbox */
+}
+
+/* CARDS */
+.two-column-layout__content {
+    justify-content: space-evenly;
+    padding: 30px 10px 30px;
+    gap: 70px 40px;
+}
+
+.card {
+    text-align: center;
+}
+
+.card__description {
+    text-align: justify;
+}
+
+.card img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* ----------------------------------------- */
+/* ------------------ HOME ----------------- */
+/* ----------------------------------------- */
+
+
+/* ¿Por qué se rompe también la tipografía de las tabs del Home cuando edito MAIN y FOOTER? :"v ---> Button NO hereda por defecto
+*/
+
+/*      BANNER      */
+.banner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.banner img{
+    width: 1160px;
+    height: 400px;
+    border-radius: 15px;
+}
+
+
+/*      MOVIES (MAIN)     */
+.home-movies-container {
+    width: 1160px;
+    margin: auto;
+}
+
+.movies-container-home h1 {
+    font-size: 3rem;
+}
+
+/* Movie Tabs */
+.movies-tabs__buttons {
+    background: inherit;
+    font-family: inherit;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-style: none;
+    margin: 10px 10px;
+    padding: 10px 0px;
+}
+
+.movies-tabs button:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Movies Preview */
+
+/* Refactor Opportunity!!! */
+/* NOTA: Evaluar necesidad del < home-movies-preview > container */
+/*       Rediseñar el preview de las películas para hacerlo más llamativo con GRID */
+
+.home-movies-preview {
+    margin: auto;
+}
+
+.home-movies-preview ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.home-movies-preview__card img {
+    width: 250px;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+
 /* ----------------------------------------- */
 /* ----------------- CINES ----------------- */
 /* ----------------------------------------- */
-.cinemas-container {
-    width: 80vw;
-    margin: auto;
-    margin-top: 30px;
-}
 
-.cinemas-container h1{
-    font-size: 3rem;
-    padding: 10px 0;
-}
-
-/* Sor by */
+/* SORT BY */
 .sort-by {
     text-align: end;
-    padding-bottom: 20px;
-    border-bottom: #888 solid 1.5px;
 }
 
 .sort-by p, .horizontal-filter, form {
@@ -178,7 +283,8 @@ footer {
     font-weight: 300;
 }
 
-.horizontal-filter {
+.sort-by--options {
+    display: inline-block;
     margin: 0 0 0 10px;
 }
 
@@ -186,324 +292,162 @@ footer {
     font-weight: 600;
 }
 
-/* Filters and Cinemas display*/
-.cinemas-and-filters {
-    font-size: 0;
-}
-
-
-.filters-container, .cinemas {
-    display: inline-block;
-    padding-top: 10px;
-    vertical-align: top;
-    font-size: 1rem; 
-}
-
-/* Filters */
-.filters-container {
-    box-sizing: border-box;
-    width: 20%;
-}
-
-.filters-container > p {
-    font-size: 1.2rem;
-    margin: 0 15px 15px 0;
-    padding: 10px 0;
-    border-bottom: #888 solid 1px;
-    font-weight: 600;
-}
-
-.side-filter p {
-    font-weight: 600;
-}
-
-.side-filter form {
-    display: block;
-    width: 100%;
-    padding: 20px 0;
-}
-
-.side-filter label {
-    display: inline-block;
-    width: 70%;
-}
-
-.side-filter {
-    display: inline-block;
-    width: 15%;
-}
-
-.side-filter__price label {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-/* Cinemas */
-.cinemas {
-    border-left: #888 solid 1.5px;
-    box-sizing: border-box;
-    width: 80%;
-    padding-top: 40px;
-    text-align: center;
-}
-
-.cinema-card {
-    display: inline-block;
+/* CARDS */
+.card--cinema {
     width: 45%;
-    margin-bottom: 60px;
-}
-
-.cinema-card img {
-    width: 90%;
 }
 
 /* ----------------------------------------- */
-/* --------------- PELICULAS --------------- */
+/* --------------- PROMOCIONES ------------- */
 /* ----------------------------------------- */
-
-.movies-container, .promotions-container {
-    width: 80vw;
-    margin: auto;
-    margin-top: 30px;
+.card--promotion {
+    width: 38%;
 }
 
-.movies-container h1, .promotions-container h1{
-    font-size: 3rem;
-    padding: 10px 0;
+.card--promotion img {
+    border: #ccc solid 1px;
 }
 
-.movies-container .movies-tabs {
-    border-bottom: #888 solid 1.5px;
-    margin: 0;
+.two-column-layout__content--promotions {
+    padding-top: 50px;
+}
+
+/* ----------------------------------------- */
+/* --------------- PELÍCULAS --------------- */
+/* ----------------------------------------- */
+.movies-tabs--movies {
     text-align: end;
 }
 
-.movies-container .movies-tabs__buttons {
-    margin: 0 10px 8px;
+.two-column-layout__heading--movies {
+    padding-bottom: 0;
 }
 
-/* Filters and Movies display*/
-.movies-and-filters, .promotions-and-filters {
-    font-size: 0;
+.two-column-layout__content--movies {
+    justify-content: center;
+    gap: 30px 25px;
 }
 
-.movies-and-filters__filter-container, .movies-and-filters__movies {
-    display: inline-block;
-    padding-top: 10px;
-    vertical-align: top;
-    font-size: 1rem;     
-}
-
-/* Filters */
-.movies-and-filters__filter-container{
-    box-sizing: border-box;
-    width: 20%;
-}
-
-.movies-and-filters__filter-container > p {
-    font-size: 1.2rem;
-    margin: 0 15px 15px 0;
-    padding: 10px 0;
-    border-bottom: #888 solid 1px;
-    font-weight: 600;
-}
-
-.side-filter__date label {
-    font-weight: 600;
-    padding-bottom: 5px;
-}
-
-/* Movies */
-.movies-and-filters__movies {
-    border-left: #888 solid 1.5px;
-    box-sizing: border-box;
-    width: 80%;
-    padding-top: 40px;
-    text-align: center;
-}
-
-.movie-card {
-    display: inline-block;
-    width: 30%;
-    margin: 0px 10px 60px 10px;
+.card--movie {
+    width: 250px;
     border-radius: 10px;
     background-color: var(--color-surface);
-
 }
 
-.movie-card img {
+.card--movie img {
     width: 100%;
+    height: 370px;
+    object-fit: cover;
+    margin-bottom: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.movie-card p {
+.card--movie p {
+    padding: 0 12px;
     padding-bottom: 20px;
 }
 
 /* ----------------------------------------- */
-/* -------------- PROMOCIONES -------------- */
+/* --------------- NOSOTROS ---------------- */
 /* ----------------------------------------- */
 
-.promotions-and-filters__filter-container, .promotions-and-filters__promotions {
-    display: inline-block;
-    padding-top: 10px;
-    vertical-align: top;
-    font-size: 1rem;   
-}
-
-/* Filters */
-.promotions-and-filters__filter-container {
-    box-sizing: border-box;
-    width: 20%;
-}
-
-.promotions-and-filters__promotions {
-    border-left: #888 solid 1.5px;
-    box-sizing: border-box;
-    width: 80%;
-    padding-top: 40px;
-    text-align: center;
-}
-
-.promotions-and-filters__filter-container > p {
-    font-size: 1.2rem;
-    margin: 0 15px 15px 0;
-    padding: 10px 0;
-    border-bottom: #888 solid 1px;
-    font-weight: 600;
-}
-
-/* Promotions */
-.promotions-container h1 {
-    padding-bottom: 20px;
-    border-bottom: #888 solid 1.5px;
-}
-
-.promotion-card {
-    display: inline-block;
-    vertical-align: top;
-    width: 45%;
-    margin-bottom: 30px;
-}
-
-.promotion-card img {
-    width: 80%;
-    border: #aaa solid 1px;
-    margin-bottom: 10px;
-}
-
-.promotion-card h2, .promotion-card p {
-    width: 80%;
+.two-column-layout__container {
     margin: auto;
+    max-width: 1070px;
 }
 
-/* ----------------------------------------- */
-/* ---------------- NOSOTROS --------------- */
-/* ----------------------------------------- */
+.navbar-container--about {
+    margin-bottom: 0;
+}
+
+.about-title {
+    display: none;
+}
+
+/* BANNER */
+.wide-banner {
+    height: 600px;
+
+    background-image: url("../assets/about/banner-about.jfif");
+    background-size: cover;
+    background-position: center;
+
+    position: relative; /* important for the overlay */
+}
+
+/* Overlay */
+.wide-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* background-color: rgb(0 0 0 / 0.25); */
+    background: linear-gradient(
+        to bottom,
+        rgb(0 0 0 / 0.50) 0%,
+        rgb(0 0 0 / 0.40) 15%,
+        rgb(0 0 0 / 0.15) 100%
+    );
+}
+
+.wide-banner__slogan {
+    position: relative; /* important for the overlay */
+    top: 1.5rem;
+    left: 3rem;
+    
+    font-size: 2.5rem;
+    font-weight: 600;    
+}
+
+.wide-banner__slogan b{
+    color: var(--color-accent);
+}
+
+/* CONTENT */
 .about-container {
-    width: 80vw;
+    max-width: 1070px;
     margin: auto;
     margin-top: 50px;
 }
 
-/* BANNER */
-.about-title {
-    font-size: 3rem;
-    margin-left: 10vw;
-}
-
-.about-container__banner {
-    height: 60vh;
-    background-image: url(../assets/about/banner-about.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #000;
-    text-align: center;
-}
-
-.slogan-about {
-    line-height: 60vh;
-    font-weight: 400;
-    font-size: 2rem;
-    font-style: italic;
-}
-
-
-/* CONTENT */
-.about-container h2{
+/* Sections */
+.about-container h2 {
     font-size: 1.7rem;
-    margin-bottom: 10px;
 }
 
 .about-section {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: #888 solid 1px;
-    font-size: 0;
+    display: flex;
+    gap: 2rem;
+    flex-flow: row nowrap;
+    padding: 1rem 0 2rem;
+    border-bottom: var(--color-divider) solid 1px;
+    margin-bottom: 1.2rem;
 }
 
-/* Section with Image to the right */
-.section-right img{
-    display: inline-block;
-    box-sizing: border-box;
-    vertical-align: top;
-    border: #aaa solid 1px;
-    margin: 0 0 0 40px;
-    padding: 0;
-    width: 30%;
-}
-
-.section-right .about-description {
-    display: inline-block;
-    box-sizing: border-box;
+.about-section__text {
+    width: 60%;
     text-align: justify;
-    width: 60%;
-    font-size: 1rem;
 }
 
-
-/* Section with Image to the left */
-.section-left img{
-    display: inline-block;
-    box-sizing: border-box;
-    vertical-align: top;
-    border: #aaa solid 1px;
-    margin: 0 40px 0 0;
-    padding: 0;
-    width: 32%;
+.about-section img {
+    width: 40%;
+    border-radius: 10px;
+    border: #ccc solid 1px;
 }
 
-.section-left .about-description {
-    display: inline-block;
-    box-sizing: border-box;
-    text-align: end;
-    width: 60%;
-    font-size: 1rem;
+/* Cards */
+.card--team img{
+    border-radius: 0;
+    width: 300px;
 }
 
-/* Team */
-.team-cards-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.team-member-card {
-    display: inline-block;
-    vertical-align: top;
-    width: 30%;
-    margin: 0 20px;
-    font-size: 1rem;
-}
-
-.team-member-card p{
+.card--team p{
     padding: 0 15px;
 }
 
-.team-member-card .bold {
+.card--team .highlight {
     font-weight: 600;
     color: #aaa;
     margin-bottom: 8px;
 }
-

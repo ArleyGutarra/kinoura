@@ -10,7 +10,6 @@
 <body>
     <header>
         <nav class="navbar-container">
-            
             <ul class="navbar">
                 <img class="logo" src="../assets/logo.png" alt="logo del sitio web kinoura">
                 <li class="navbar__item"><a href="../index.html">Kinoura</a></li>
@@ -23,89 +22,88 @@
     </header>
 
     <main>
-        <section class="cinemas-container">
-            <h1>Cines</h1>
-            <div class="sort-by">
-                <p>Ordenar por:</p>
-                <div class="horizontal-filter">
-                    <form>
-                        <input type="radio" id="sort-rating" name="sort-by" value="rating">
-                        <label for="sort-rating">Popularidad</label>
-                        <input type="radio" id="sort-price" name="sort-by" value="price">
-                        <label for="sort-price">Precio</label>
-                        <input type="radio" id="sort-nearby" name="sort-by" value="nearby">
-                        <label for="sort-nearby">Cercanía</label>
-                    </form>
-                </div>
-            </div>
-            <div class="cinemas-and-filters">
-                <div class="filters-container">
-                    <p>Filtros:</p>
-                    <div class="side-filter">
+        <section class="two-column-layout__container">
+            <div class="two-column-layout__heading">
+                <h1>Cines</h1>
+                <div class="sort-by">
+                    <p>Ordenar por:</p>
+                    <div class="sort-by--options">
                         <form>
-                            <p>Cadena:</p>
-                            <input type="radio" id="cineplanet" name="cinema-chain" value="cineplanet">
-                            <label for="cineplanet">Cineplanet</label>
-                            <input type="radio" id="cinemark" name="cinema-chain" value="cinemark">
-                            <label for="cinemark">Cinemark</label>
-                            <input type="radio" id="cinepolis" name="cinema-chain" value="cinepolis">
-                            <label for="cinepolis">Cinepolis</label>
-                        </form>
-                        
-                        <form>
-                            <p>Ciudad:</p>
-                            <input type="radio" id="lima" name="city" value="lima">
-                            <label for="lima">Lima</label>
-                            <input type="radio" id="trujillo" name="city" value="trujillo">
-                            <label for="trujillo">Trujillo</label>
-                            <input type="radio" id="cuzco" name="city" value="cuzco">
-                            <label for="cuzco">Cuzco</label>
-                        </form>
-
-                        <form class="side-filter__price">
-                            <label for="price">Precio:</label>
-                            <input type="range" id="price" name="price" min="1" max="70">
+                            <input type="radio" id="sort-rating" name="sort-by" value="rating">
+                            <label for="sort-rating">Popularidad</label>
+                            <input type="radio" id="sort-price" name="sort-by" value="price">
+                            <label for="sort-price">Precio</label>
+                            <input type="radio" id="sort-nearby" name="sort-by" value="nearby">
+                            <label for="sort-nearby">Cercanía</label>
                         </form>
                     </div>
                 </div>
+            </div>
 
-                <div class="cinemas">
-                    <div class="cinema-card">
-                        <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
-                        <h2>Cinema X</h2>
-                        <p>4.35 ★ | s/. 10 - 20</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+            <div class="two-column-layout__sidefilter-content-container">
+                <aside class="two-column-layout__sidefilter"> 
+                    <div class="sidefilter-title">  <!-- rename class - integrate into BEM -->
+                        <span class="material-symbols-outlined">tune</span>
+                        <p>FILTROS:</p>
                     </div>
 
-                    <div class="cinema-card">
+                    <details>
+                        <summary>Cadena</summary>
+                            <label><input type="checkbox" name="cinema-chain" value="cineplanet">Cineplanet</label>
+                            <label><input type="checkbox" name="cinema-chain" value="cinemark">Cinemark</label>
+                            <label><input type="checkbox" name="cinema-chain" value="cinepolis">Cinepolis</label>
+                    </details>
+
+                    <details>
+                        <summary>Ciudad</summary>
+                            <label><input type="checkbox" name="city" value="Lima">Lima</label>
+                            <label><input type="checkbox" name="city" value="Trujillo">Trujillo</label>
+                            <label><input type="checkbox" name="city" value="Cuzco">Cuzco</label>
+                    </details>
+
+                    <details>
+                        <summary>Precio</summary>
+                            <label><input type="range" name="price" min="1" max="70"></label>
+                    </details>
+                </aside>
+
+                <div class="two-column-layout__content">
+                    <div class="card card--cinema">
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
-                    <div class="cinema-card">
+
+                    <div class="card card--cinema">
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
-                    <div class="cinema-card">
+                    <div class="card card--cinema">
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
-                    <div class="cinema-card">
+                    <div class="card card--cinema">
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
-                    <div class="cinema-card">
+                    <div class="card card--cinema">
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                    </div>
+                    <div class="card card--cinema">
+                        <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
+                        <h2>Cinema X</h2>
+                        <p>4.35 ★ | s/. 10 - 20</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
                 </div>
             </div>
