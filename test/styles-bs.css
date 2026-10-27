@@ -1,0 +1,38 @@
+/* --------------- IMPORTS- --------------- */
+
+/* Monserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Montserrat", sans-serif; */
+
+/* Material Icons */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search,person,notifications,tune');
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -------------- VARIABLES --------------- */
+
+/* Color Palette */
+:root {
+    --color-background: #101000;
+    --color-surface: #2a2a2a;
+    --color-divider: #808080;
+    --color-primary: #7f211e;
+    --color-accent: #e53935;
+}
+
+/* ----------------------------------------- */
+/* ---------------- GLOBAL ----------------- */
+/* ----------------------------------------- */
+
+body {
+    background-color: var(--color-background);
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.main-navbar {
+    border-bottom: var(--color-divider) solid 1px;
+}
