@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    gap: 10px;
+    grid-template-columns: 80px 1fr; /* diferencia entre 1fr y auto? */
+    grid-template-rows: 40px 1fr 80px;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+header, aside, main, footer {
+    background-color: #444;
+}
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}

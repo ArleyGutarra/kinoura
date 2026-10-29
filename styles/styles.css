@@ -233,10 +233,6 @@ footer {
 /* ------------------ HOME ----------------- */
 /* ----------------------------------------- */
 
-
-/* ¿Por qué se rompe también la tipografía de las tabs del Home cuando edito MAIN y FOOTER? :"v ---> Button NO hereda por defecto
-*/
-
 /*      BANNER      */
 .banner {
     display: flex;

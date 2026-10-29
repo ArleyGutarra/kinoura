@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1284" height="304" viewBox="0 0 1284 304" role="img" aria-labelledby="title desc">
+  <title id="title">KINOURA</title>
+  <desc id="desc">Black KINOURA wordmark with the O represented by a hydrogen atom symbol. Transparent background.</desc>
+  <g fill="#000000">
+    <!-- K -->
+    <path d="M35 63H66V141L145 63H187L96 153L190 256H147L66 166V256H35Z"/>
+    <!-- I -->
+    <path d="M214 63H245V256H214Z"/>
+    <!-- N -->
+    <path d="M294 63H334L432 210V63H463V256H424L325 109V256H294Z"/>
+    <!-- O / hydrogen atom: circular orbit, nucleus, and electron -->
+    <circle cx="597" cy="159" r="106" fill="none" stroke="#000000" stroke-width="20"/>
+    <circle cx="597" cy="157.5" r="44.5"/>
+    <circle cx="597" cy="55.5" r="31"/>
+    <!-- U -->
+    <path d="M738 63H769V178C769 213 785 232 813 232C842 232 857 213 857 178V63H888V181C888 230 860 261 813 261C766 261 738 230 738 181Z"/>
+    <!-- R -->
+    <path d="M930 63H998C1040 63 1067 84 1067 119C1067 145 1051 164 1021 171L1070 256H1034L989 174H966V256H930Z M966 91V147H996C1021 147 1034 137 1034 119C1034 101 1021 91 996 91Z" fill-rule="evenodd"/>
+    <!-- A -->
+    <path d="M1160 63H1192L1272 256H1237L1218 210H1134L1115 256H1080Z M1176 106L1146 182H1207Z" fill-rule="evenodd"/>
+  </g>
+</svg>
