@@ -211,6 +211,106 @@ footer {
     border-radius: 15px;
 }
 
+
+/* ------------------ ABOUT -------------------- */
+/* BANNER */
+.wide-banner {
+    height: 420px;
+
+    background-image: url("../assets/about/banner-about.jfif");
+    background-size: cover;
+    background-position: 75% 50%;
+
+    position: relative;
+    /* important for the overlay */
+}
+
+/* Overlay */
+.wide-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* background-color: rgb(0 0 0 / 0.25); */
+    background: linear-gradient(to bottom,
+            rgb(0 0 0 / 0.50) 0%,
+            rgb(0 0 0 / 0.20) 30%,
+            rgb(0 0 0 / 0.10) 100%);
+}
+
+.wide-banner__slogan {
+    position: relative;
+    /* important for the overlay */
+    top: 1rem;
+    left: 1rem;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.wide-banner__slogan b {
+    color: var(--color-accent);
+}
+
+
+/* CONTENT */
+.about-container {
+    margin: 25px 25px 0 25px;
+}
+
+.about-title {
+    display: none;
+}
+
+.about-container h2 {
+    margin: 0.5rem 0;
+}
+
+.about-section {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 20px;
+}
+
+.about-section img {
+    width: 100%;
+    object-fit: contain;
+    margin-top: 1rem;
+}
+
+.about-section:nth-child(2) img {
+    order: 2;
+    /* Mostrar la imagen luego del texto*/
+}
+
+.about-section__team .card--team {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.card--team {
+    width: 90%;
+    text-align: center;
+}
+
+.card--team img {
+    width: min(100%, 290px);
+    margin-top: 0;
+    filter: grayscale(0) contrast(1.2);
+    border-left: var(--color-primary) solid 10px;
+}
+
+.card--team p {
+    padding: 0 15px;
+}
+
+.card--team .highlight {
+    font-weight: 600;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+
 /* DEVICE: Tablet */
 @media (min-width: 768px) {
 
@@ -276,7 +376,7 @@ footer {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .banner {
         display: flex;
         justify-content: center;
@@ -356,6 +456,8 @@ footer {
     }
 
 }
+
+
 
 /* 
     .banner {
