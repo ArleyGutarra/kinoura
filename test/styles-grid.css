@@ -239,6 +239,7 @@ footer {
     .desktop-menu a {
         font-size: 1.2rem;
         color: #ddd;
+        font-weight: 500;
     }
 
     .banner--mobile {
@@ -247,7 +248,7 @@ footer {
 
     .banner {
         width: 100%;
-        height: 65vh;
+        height: 40vh;
         max-height: 800px;
         overflow: hidden;
     }
@@ -262,13 +263,112 @@ footer {
 
     .movies-preview {
         grid-template-columns: repeat(3, minmax(100px, 1fr));
-        gap: 10px;
+        gap: 25px;
     }
 
-    /* WIP: Diseñando en base a iPad Mini (768x1024) */
+    .home-movies-container {
+        margin: 0 3rem;
+    }
 
-    /* Pendientes */
-    /*  - Sección de Películas (padding, font-size)
-        - Gap de cards
-        - DISEÑAR para DESKTOP*/
+    .movies-tabs__tab {
+        font-size: 1.125rem;
+        margin: 10px 5px;
+    }
 }
+
+@media (min-width: 1024px) {
+    .banner {
+        display: flex;
+        justify-content: center;
+        height: 370px;
+        margin: 40px 0 50px;
+        overflow: visible;
+    }
+
+    img.banner--desktop {
+        width: 960px;
+        height: 370px;
+        border-radius: 15px;
+        border: var(--color-divider) solid 1px;
+    }
+
+    .home-movies-container {
+        width: 960px;
+        margin: auto;
+    }
+
+    .movies-preview__card img {
+        border-radius: 0;
+    }
+
+    .movies-preview {
+        display: grid;
+        height: 678px;
+        list-style: none;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        grid-template-columns: 6fr 3fr 2fr 2fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+            "xl m1 l  l"
+            "xl m1 l  l"
+            "xl m1 l  l"
+            "xl m2 l  l"
+            "xl m2 s1 s2"
+            "xl m2 s1 s2";
+    }
+
+    .movies-preview li:nth-child(1) {
+        grid-area: xl;
+    }
+
+    .movies-preview li:nth-child(2) {
+        grid-area: m1;
+    }
+
+    .movies-preview li:nth-child(3) {
+        grid-area: m2;
+    }
+
+    .movies-preview li:nth-child(4) {
+        grid-area: l;
+    }
+
+    .movies-preview li:nth-child(5) {
+        grid-area: s1;
+    }
+
+    .movies-preview li:nth-child(6) {
+        grid-area: s2;
+    }
+
+    .movies-preview li {
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .movies-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+}
+
+/* 
+    .banner {
+        width: 100%;
+        height: 40vh;
+        max-height: 800px;
+        overflow: ;
+    }
+
+    img.banner--desktop {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    } */

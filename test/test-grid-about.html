@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles-grid.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-block">
+                    <!-- Control que guarda el estado del menú -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+                    <!-- Botón hamburguesa -->
+                    <label for="menu-toggle" class="material-symbols-outlined menu-toggle-icon">menu</label>
+
+                    <div class="navbar__logo">
+                        <a href="test-grid.html"><img src="../assets/kinoura-logo-white.png"
+                                alt="logo del sitio web kinoura y enlace a la página principal"></a>
+                    </div>
+
+                    <div class="desktop-menu">
+                        <ul>
+                            <li><a href="#">Películas</a></li>
+                            <li><a href="#">Cines</a></li>
+                            <li><a href="#">Promociones</a></li>
+                            <li><a href="#">Nosotros</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="navbar-block">
+                    <ul class="navbar-tools">
+                        <li><span class="material-symbols-outlined">search</span></li>
+                        <li><span class="material-symbols-outlined">person</span></li>
+                        <li><span class="material-symbols-outlined">notifications</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recator opportunity: ¿Cómo hago para que al hacer clic y se muestre el menú, esto se ponga encima del banner y no lo desplace? -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="#">Películas</a></li>
+                    <li><a href="#">Cines</a></li>
+                    <li><a href="#">Promociones</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="about-title">Nosotros</h1>
+        <div class="wide-banner">
+            <strong class="wide-banner__slogan">Menos tiempo buscando,<br>más tiempo <b>viviendo</b> el cine</strong>
+        </div>
+
+        <section class="about-container">
+            <h2>Nuestra Historia</h2>
+            <section class="about-section">
+                <div class="about-section__text">
+                    <p>Como amantes del cine, nos encanta descubrir nuevas experiencias y encontrar las mejores opciones
+                        al mejor precio. Sin embargo, cuando queríamos ver una película, el proceso de buscar funciones,
+                        comparar precios, revisar formatos y encontrar un buen lugar podía hacerse largo y tedioso. La
+                        información estaba repartida entre distintas plataformas, páginas y establecimientos. Al final,
+                        pasábamos más tiempo buscando que disfrutando. </p>
+                    <p>Por eso creamos Kinoura: un espacio que reúne todo lo relacionado con una salida al cine, para
+                        que encontrar, comparar y elegir sea mucho más sencillo.</p>
+                    <p>Porque elegir qué ver debería ser parte de la diversión, no una tarea.</p>
+                </div>
+
+                <img src="../assets/about/our-story-about.png" alt="">
+            </section>
+
+            <h2>Nuestra Misión</h2>
+            <section class="about-section">
+                <img src="../assets/about/mision-about.png" alt="">
+                <div class="about-section__text">
+                    <p>Hacer que disfrutar del cine sea más fácil, desde el momento en que empiezas a buscar.</p>
+                    <p>En Kinoura reunimos en un solo lugar las opciones que forman parte de una experiencia de cine:
+                        películas, funciones, precios, formatos, dulcería, merchandising y mucho más.</p>
+                    <p>Queremos que puedas descubrir, comparar y elegir sin tener que saltar entre diferentes
+                        plataformas.</p>
+                    <p><strong>Menos tiempo buscando. Más tiempo disfrutando.</strong></p>
+                </div>
+            </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="footer_links-list">
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+            </ul>
+        </nav>
+        <p class="footer__copyright">Kinoura &copy Perú 2026. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
