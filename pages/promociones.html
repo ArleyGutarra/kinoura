@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinoura | Promociones</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
     <header>
-        <nav class="navbar-container">
-            <ul class="navbar">
-                <div class="navbar__items-container">
-                    <li class="navbar__logo"><a href="../index.html"><img src="../assets/logo.png" alt="logo del sitio web kinoura y enlace a la página principal"></a></li>
-                    <li class="navbar__item"><a href="./cines.html">Cines</a></li>
-                    <li class="navbar__item"><a href="./peliculas.html">Películas</a></li>
-                    <li class="navbar__item page-selected"><a href="#">Promociones</a></li>
-                    <li class="navbar__item"><a href="./nosotros.html">Nosotros</a></li>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-block">
+                    <!-- Control que guarda el estado del menú -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+                    <!-- Botón hamburguesa -->
+                    <label for="menu-toggle" class="material-symbols-outlined menu-toggle-icon">menu</label>
+
+                    <div class="navbar__logo">
+                        <a href="../index.html"><img src="../assets/kinoura-logo-white.png"
+                                alt="logo del sitio web kinoura y enlace a la página principal"></a>
+                    </div>
+
+                    <div class="desktop-menu">
+                        <ul>
+                            <li><a href="./peliculas.html">Películas</a></li>
+                            <li><a href="./cines.html">Cines</a></li>
+                            <li class="page-selected"><a href="#">Promociones</a></li>
+                            <li><a href="./nosotros.html">Nosotros</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="navbar__items-container">
-                    <span class="material-symbols-outlined">search</span>
-                    <span class="material-symbols-outlined">notifications</span>
-                    <span class="material-symbols-outlined">person</span>
+                <div class="navbar-block">
+                    <ul class="navbar-tools">
+                        <li><span class="material-symbols-outlined">search</span></li>
+                        <li><span class="material-symbols-outlined">person</span></li>
+                        <li><span class="material-symbols-outlined">notifications</span></li>
+                    </ul>
                 </div>
-            </ul>            
+            </div>
+
+            <!-- Recator opportunity: ¿Cómo hago para que al hacer clic y se muestre el menú, esto se ponga encima del banner y no lo desplace? -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="#">Películas</a></li>
+                    <li><a href="./cines.html">Cines</a></li>
+                    <li><a href="#">Promociones</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -35,61 +63,73 @@
 
             <div class="two-column-layout__sidefilter-content-container">
                 <aside class="two-column-layout__sidefilter">
-                    <div class="sidefilter-title">  <!-- rename class - integrate into BEM -->
+                    <div class="sidefilter-title"> <!-- rename class - integrate into BEM -->
                         <span class="material-symbols-outlined">tune</span>
                         <p>FILTROS:</p>
                     </div>
 
                     <details>
                         <summary>Cadena</summary>
-                            <label><input type="checkbox" name="cinema-chain" value="cineplanet">Cineplanet</label>
-                            <label><input type="checkbox" name="cinema-chain" value="cinemark">Cinemark</label>
-                            <label><input type="checkbox" name="cinema-chain" value="cinepolis">Cinepolis</label>
+                        <label><input type="checkbox" name="cinema-chain" value="cineplanet">Cineplanet</label>
+                        <label><input type="checkbox" name="cinema-chain" value="cinemark">Cinemark</label>
+                        <label><input type="checkbox" name="cinema-chain" value="cinepolis">Cinepolis</label>
                     </details>
 
                     <details>
                         <summary>Categorias</summary>
-                            <label><input type="checkbox" name="category" value="movies">Peliculas</label>
-                            <label><input type="checkbox" name="category" value="food">Dulcería</label>
-                            <label><input type="checkbox" name="category" value="merchandising">Merch</label>
+                        <label><input type="checkbox" name="category" value="movies">Peliculas</label>
+                        <label><input type="checkbox" name="category" value="food">Dulcería</label>
+                        <label><input type="checkbox" name="category" value="merchandising">Merch</label>
                     </details>
                 </aside>
 
                 <div class="two-column-layout__content two-column-layout__content--promotions">
                     <div class="card card--promotion">
-                        <img src="../assets/promos/promo-palomera-madoka.jpg" alt="palomera de forma hexagonal con temática de Madoka Magica">
+                        <img src="../assets/promos/promo-palomera-madoka.jpg"
+                            alt="palomera de forma hexagonal con temática de Madoka Magica">
                         <h2>Palomera Madoka Mágica</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit asd jiajsio djaois djoi ajsdio ja ajosid jaoisdj.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit asd jiajsio djaois djoi ajsdio ja
+                            ajosid jaoisdj.</p>
                     </div>
 
                     <div class="card card--promotion">
-                        <img src="../assets/promos/promo-combo.png" alt="Foto de canchita grande junto a dos vasos de gaseosa. En la imagen se detalla que la promoción incluye un vaso coleccionable, pero este no se muestra">
+                        <img src="../assets/promos/promo-combo.png"
+                            alt="Foto de canchita grande junto a dos vasos de gaseosa. En la imagen se detalla que la promoción incluye un vaso coleccionable, pero este no se muestra">
                         <h2>Combo miércoles: 2 entradas 2D más 1 Combo Película Salado</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit  asd jiajsio djaois djoi ajsdio ja ajosid jaoisdj.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit asd jiajsio djaois djoi ajsdio ja
+                            ajosid jaoisdj.</p>
                     </div>
 
                     <div class="card card--promotion">
-                        <img src="../assets/promos/promo-combo.png" alt="palomera de forma hexagonal con temática de Madoka Magica">
+                        <img src="../assets/promos/promo-combo.png"
+                            alt="palomera de forma hexagonal con temática de Madoka Magica">
                         <h2>Palomera Madoka Mágica</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit  asd jiajsio djaois djoi ajsdio ja ajosid jaoisdj.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit asd jiajsio djaois djoi ajsdio ja
+                            ajosid jaoisdj.</p>
                     </div>
 
                     <div class="card card--promotion">
-                        <img src="../assets/promos/promo-palomera-madoka.jpg" alt="Foto de canchita grande junto a dos vasos de gaseosa. En la imagen se detalla que la promoción incluye un vaso coleccionable, pero este no se muestra">
+                        <img src="../assets/promos/promo-palomera-madoka.jpg"
+                            alt="Foto de canchita grande junto a dos vasos de gaseosa. En la imagen se detalla que la promoción incluye un vaso coleccionable, pero este no se muestra">
                         <h2>Combo miércoles: 2 entradas 2D más 1 Combo Película Salado</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit  asd jiajsio djaois djoi ajsdio ja ajosid jaoisdj.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit asd jiajsio djaois djoi ajsdio ja
+                            ajosid jaoisdj.</p>
                     </div>
 
                     <div class="card card--promotion">
-                        <img src="../assets/promos/promo-palomera-madoka.jpg" alt="palomera de forma hexagonal con temática de Madoka Magica">
+                        <img src="../assets/promos/promo-palomera-madoka.jpg"
+                            alt="palomera de forma hexagonal con temática de Madoka Magica">
                         <h2>Palomera Madoka Mágica</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit  asd jiajsio djaois djoi ajsdio ja ajosid jaoisdj.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit asd jiajsio djaois djoi ajsdio ja
+                            ajosid jaoisdj.</p>
                     </div>
 
                     <div class="card card--promotion">
-                        <img src="../assets/promos/promo-combo.png" alt="Foto de canchita grande junto a dos vasos de gaseosa. En la imagen se detalla que la promoción incluye un vaso coleccionable, pero este no se muestra">
+                        <img src="../assets/promos/promo-combo.png"
+                            alt="Foto de canchita grande junto a dos vasos de gaseosa. En la imagen se detalla que la promoción incluye un vaso coleccionable, pero este no se muestra">
                         <h2>Combo miércoles: 2 entradas 2D más 1 Combo Película Salado</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit  asd jiajsio djaois djoi ajsdio ja ajosid jaoisdj.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit asd jiajsio djaois djoi ajsdio ja
+                            ajosid jaoisdj.</p>
                     </div>
                 </div>
             </div>
@@ -107,4 +147,5 @@
         <p class="footer__copyright">Kinoura &copy Perú 2026. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>

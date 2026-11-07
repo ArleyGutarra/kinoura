@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinoura | Películas</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
     <header>
-        <nav class="navbar-container">
-            <ul class="navbar">
-                <div class="navbar__items-container">
-                    <li class="navbar__logo"><a href="../index.html"><img src="../assets/logo.png" alt="logo del sitio web kinoura y enlace a la página principal"></a></li>
-                    <li class="navbar__item"><a href="./cines.html">Cines</a></li>
-                    <li class="navbar__item page-selected"><a href="#">Películas</a></li>
-                    <li class="navbar__item"><a href="./promociones.html">Promociones</a></li>
-                    <li class="navbar__item"><a href="./nosotros.html">Nosotros</a></li>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-block">
+                    <!-- Control que guarda el estado del menú -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+                    <!-- Botón hamburguesa -->
+                    <label for="menu-toggle" class="material-symbols-outlined menu-toggle-icon">menu</label>
+
+                    <div class="navbar__logo">
+                        <a href="../index.html"><img src="../assets/kinoura-logo-white.png"
+                                alt="logo del sitio web kinoura y enlace a la página principal"></a>
+                    </div>
+
+                    <div class="desktop-menu">
+                        <ul>
+                            <li class="page-selected"><a href="#">Películas</a></li>
+                            <li><a href="./cines.html">Cines</a></li>
+                            <li><a href="./promociones.html">Promociones</a></li>
+                            <li><a href="./nosotros.html">Nosotros</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="navbar__items-container">
-                    <span class="material-symbols-outlined">search</span>
-                    <span class="material-symbols-outlined">notifications</span>
-                    <span class="material-symbols-outlined">person</span>
+                <div class="navbar-block">
+                    <ul class="navbar-tools">
+                        <li><span class="material-symbols-outlined">search</span></li>
+                        <li><span class="material-symbols-outlined">person</span></li>
+                        <li><span class="material-symbols-outlined">notifications</span></li>
+                    </ul>
                 </div>
-            </ul>            
+            </div>
+
+            <!-- Recator opportunity: ¿Cómo hago para que al hacer clic y se muestre el menú, esto se ponga encima del banner y no lo desplace? -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="#">Películas</a></li>
+                    <li><a href="./cines.html">Cines</a></li>
+                    <li><a href="./promociones.html">Promociones</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -32,36 +60,36 @@
             <div class="two-column-layout__heading two-column-layout__heading--movies">
                 <h1>Películas</h1>
                 <div class="movies-tabs movies-tabs--movies">
-                    <button class="movies-tabs__buttons" type="button">En cartelera</button>
-                    <button class="movies-tabs__buttons" type="button">Próximos estrenos</button>
-                    <button class="movies-tabs__buttons" type="button">Preventa</button>
+                    <button class="movies-tabs__tab movies-tabs__tab-selected" type="button">En cartelera</button>
+                    <button class="movies-tabs__tab" type="button">Próximos estrenos</button>
+                    <button class="movies-tabs__tab" type="button">Preventa</button>
                 </div>
             </div>
 
             <div class="two-column-layout__sidefilter-content-container">
                 <aside class="two-column-layout__sidefilter">
-                    <div class="sidefilter-title">  <!-- rename class - integrate into BEM -->
+                    <div class="sidefilter-title"> <!-- rename class - integrate into BEM -->
                         <span class="material-symbols-outlined">tune</span>
                         <p>FILTROS:</p>
                     </div>
 
                     <details>
                         <summary>Cadena</summary>
-                            <label><input type="checkbox" name="cinema-chain" value="cineplanet">Cineplanet</label>
-                            <label><input type="checkbox" name="cinema-chain" value="cinemark">Cinemark</label>
-                            <label><input type="checkbox" name="cinema-chain" value="cinepolis">Cinepolis</label>
+                        <label><input type="checkbox" name="cinema-chain" value="cineplanet">Cineplanet</label>
+                        <label><input type="checkbox" name="cinema-chain" value="cinemark">Cinemark</label>
+                        <label><input type="checkbox" name="cinema-chain" value="cinepolis">Cinepolis</label>
                     </details>
 
                     <details>
                         <summary>Ciudad</summary>
-                            <label><input type="checkbox" name="city" value="Lima">Lima</label>
-                            <label><input type="checkbox" name="city" value="Trujillo">Trujillo</label>
-                            <label><input type="checkbox" name="city" value="Cuzco">Cuzco</label>
+                        <label><input type="checkbox" name="city" value="Lima">Lima</label>
+                        <label><input type="checkbox" name="city" value="Trujillo">Trujillo</label>
+                        <label><input type="checkbox" name="city" value="Cuzco">Cuzco</label>
                     </details>
 
                     <details>
                         <summary>Precio</summary>
-                            <label><input type="range" name="price" min="1" max="70"></label>
+                        <label><input type="range" name="price" min="1" max="70"></label>
                     </details>
                 </aside>
 
@@ -73,29 +101,33 @@
                     </div>
 
                     <div class="card card--movie">
-                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif"pelicula_2.jpg" alt="portada de la película X">
+                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif" pelicula_2.jpg"
+                            alt="portada de la película X">
                         <h2>Película X</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
 
                     <div class="card card--movie">
-                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif"pelicula_3.jpg" alt="portada de la película X">
+                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif" pelicula_3.jpg"
+                            alt="portada de la película X">
                         <h2>Película X</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
 
                     <div class="card card--movie">
-                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif"pelicula_2.jpg" alt="portada de la película X">
+                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif" pelicula_2.jpg"
+                            alt="portada de la película X">
                         <h2>Película X</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
 
                     <div class="card card--movie">
-                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif"pelicula_3.jpg" alt="portada de la película X">
+                        <img src="../assets/movie-posters/spiderman_brand-new-day.jfif" pelicula_3.jpg"
+                            alt="portada de la película X">
                         <h2>Película X</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
-                    
+
                     <div class="card card--movie">
                         <img src="../assets/movie-posters/spiderman_brand-new-day.jfif" alt="portada de la película X">
                         <h2>Película X</h2>
@@ -116,4 +148,5 @@
         <p class="footer__copyright">Kinoura &copy Perú 2026. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>

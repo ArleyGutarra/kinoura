@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,48 @@
 
 <body>
     <header>
-        <nav class="navbar-container">
-            <ul class="navbar">
-                <div class="navbar__items-container">
-                    <li class="navbar__logo"><a href="../index.html"><img src="../assets/logo.png" alt="logo del sitio web kinoura y enlace a la página principal"></a></li>
-                    <li class="navbar__item page-selected"><a href="#">Cines</a></li>
-                    <li class="navbar__item"><a href="./peliculas.html">Películas</a></li>
-                    <li class="navbar__item"><a href="./promociones.html">Promociones</a></li>
-                    <li class="navbar__item"><a href="./nosotros.html">Nosotros</a></li>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-block">
+                    <!-- Control que guarda el estado del menú -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+                    <!-- Botón hamburguesa -->
+                    <label for="menu-toggle" class="material-symbols-outlined menu-toggle-icon">menu</label>
+
+                    <div class="navbar__logo">
+                        <a href="../index.html"><img src="../assets/kinoura-logo-white.png"
+                                alt="logo del sitio web kinoura y enlace a la página principal"></a>
+                    </div>
+
+                    <div class="desktop-menu">
+                        <ul>
+                            <li><a href="./peliculas.html">Películas</a></li>
+                            <li class="page-selected"><a href="#">Cines</a></li>
+                            <li><a href="./promociones.html">Promociones</a></li>
+                            <li><a href="./nosotros.html">Nosotros</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="navbar__items-container">
-                    <span class="material-symbols-outlined">search</span>
-                    <span class="material-symbols-outlined">notifications</span>
-                    <span class="material-symbols-outlined">person</span>
+                <div class="navbar-block">
+                    <ul class="navbar-tools">
+                        <li><span class="material-symbols-outlined">search</span></li>
+                        <li><span class="material-symbols-outlined">person</span></li>
+                        <li><span class="material-symbols-outlined">notifications</span></li>
+                    </ul>
                 </div>
-            </ul>            
+            </div>
+
+            <!-- Recator opportunity: ¿Cómo hago para que al hacer clic y se muestre el menú, esto se ponga encima del banner y no lo desplace? -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="./peliculas.html">Películas</a></li>
+                    <li><a href="#">Cines</a></li>
+                    <li><a href="./promociones.html">Promociones</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -48,29 +75,29 @@
             </div>
 
             <div class="two-column-layout__sidefilter-content-container">
-                <aside class="two-column-layout__sidefilter"> 
-                    <div class="sidefilter-title">  <!-- rename class - integrate into BEM -->
+                <aside class="two-column-layout__sidefilter">
+                    <div class="sidefilter-title"> <!-- rename class - integrate into BEM -->
                         <span class="material-symbols-outlined">tune</span>
                         <p>FILTROS:</p>
                     </div>
 
                     <details>
                         <summary>Cadena</summary>
-                            <label><input type="checkbox" name="cinema-chain" value="cineplanet">Cineplanet</label>
-                            <label><input type="checkbox" name="cinema-chain" value="cinemark">Cinemark</label>
-                            <label><input type="checkbox" name="cinema-chain" value="cinepolis">Cinepolis</label>
+                        <label><input type="checkbox" name="cinema-chain" value="cineplanet">Cineplanet</label>
+                        <label><input type="checkbox" name="cinema-chain" value="cinemark">Cinemark</label>
+                        <label><input type="checkbox" name="cinema-chain" value="cinepolis">Cinepolis</label>
                     </details>
 
                     <details>
                         <summary>Ciudad</summary>
-                            <label><input type="checkbox" name="city" value="Lima">Lima</label>
-                            <label><input type="checkbox" name="city" value="Trujillo">Trujillo</label>
-                            <label><input type="checkbox" name="city" value="Cuzco">Cuzco</label>
+                        <label><input type="checkbox" name="city" value="Lima">Lima</label>
+                        <label><input type="checkbox" name="city" value="Trujillo">Trujillo</label>
+                        <label><input type="checkbox" name="city" value="Cuzco">Cuzco</label>
                     </details>
 
                     <details>
                         <summary>Precio</summary>
-                            <label><input type="range" name="price" min="1" max="70"></label>
+                        <label><input type="range" name="price" min="1" max="70"></label>
                     </details>
                 </aside>
 
@@ -79,42 +106,48 @@
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
 
                     <div class="card card--cinema">
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
                     <div class="card card--cinema">
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
                     <div class="card card--cinema">
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
                     <div class="card card--cinema">
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
                     <div class="card card--cinema">
                         <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
                         <h2>Cinema X</h2>
                         <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                        <p class="card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                     </div>
                 </div>
             </div>
-            
+
         </section>
     </main>
     <footer>

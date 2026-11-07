@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinoura</title>
-    <link rel="stylesheet" href="./styles/styles.css"> 
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar-container">
-            <ul class="navbar">
-                <div class="navbar__items-container">
-                    <li class="navbar__logo"><a href="#"><img src="../assets/logo.png" alt="logo del sitio web kinoura y enlace a la página principal"></a></li>
-                    <li class="navbar__item"><a href="./pages/cines.html">Cines</a></li>
-                    <li class="navbar__item"><a href="./pages/peliculas.html">Películas</a></li>
-                    <li class="navbar__item"><a href="./pages/promociones.html">Promociones</a></li>
-                    <li class="navbar__item"><a href="./pages/nosotros.html">Nosotros</a></li>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-block">
+                    <!-- Control que guarda el estado del menú -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+                    <!-- Botón hamburguesa -->
+                    <label for="menu-toggle" class="material-symbols-outlined menu-toggle-icon">menu</label>
+
+                    <div class="navbar__logo">
+                        <a href="#"><img src="../assets/kinoura-logo-white.png"
+                                alt="logo del sitio web kinoura y enlace a la página principal"></a>
+                    </div>
+
+                    <div class="desktop-menu">
+                        <ul>
+                            <li><a href="./pages/peliculas.html">Películas</a></li>
+                            <li><a href="./pages/cines.html">Cines</a></li>
+                            <li><a href="./pages/promociones.html">Promociones</a></li>
+                            <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="navbar__items-container">
-                    <span class="material-symbols-outlined">search</span>
-                    <span class="material-symbols-outlined">notifications</span>
-                    <span class="material-symbols-outlined">person</span>
+                <div class="navbar-block">
+                    <ul class="navbar-tools">
+                        <li><span class="material-symbols-outlined">search</span></li>
+                        <li><span class="material-symbols-outlined">person</span></li>
+                        <li><span class="material-symbols-outlined">notifications</span></li>
+                    </ul>
                 </div>
-            </ul>            
+            </div>
+
+            <!-- Recator opportunity: ¿Cómo hago para que al hacer clic y se muestre el menú, esto se ponga encima del banner y no lo desplace? -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="./pages/peliculas.html">Películas</a></li>
+                    <li><a href="./pages/cines.html">Cines</a></li>
+                    <li><a href="./pages/promociones.html">Promociones</a></li>
+                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
         <div class="banner">
-            <img src="./assets/banners/banner-doomsday.webp" alt="Baner publicitando el re-estreno de Avengers Endgame">
+            <img class="banner--mobile" src="../assets/banners/mobile/Combo-Street-Fighter_Banner-Web-Mobile.png"
+                alt="Baner publicitario mostrando la promoción: Combo Street Fighter">
+            <img class="banner--desktop" src="../assets/banners/Combo-Street-Fighter_Banner-Web.png"
+                alt="Baner publicitario mostrando la promoción: Combo Street Fighter">
         </div>
 
         <section class="home-movies-container">
@@ -40,23 +70,31 @@
             (las películas) de manera dinámica dependiendo de la selección del usuario 
             -->
             <div class="movies-tabs">
-                <button class="movies-tabs__buttons" type="button">En cartelera</button>
-                <button class="movies-tabs__buttons" type="button">Preventa</button>
-                <button class="movies-tabs__buttons" type="button">Próximos estrenos</button>
+                <button class="movies-tabs__tab movies-tabs__tab-selected" type="button">En cartelera</button>
+                <button class="movies-tabs__tab" type="button">Preventa</button>
+                <button class="movies-tabs__tab" type="button">Próximos estrenos</button>
             </div>
 
             <!-- 
             En esta sección, dependiendo del botón (tab) seleccionado, se debería cambiar
             cambiar las películas que se muestren, pero la estructura sería la misma.
             -->
-            <div class="home-movies-preview">
-                <ul>
-                    <li class = "home-movies-preview__card"><img src="assets/movie-posters/avengers-endgame.jfif" alt="póster de la película Avengers: Endgame"></li>
-                    <li class = "home-movies-preview__card"><img src="assets/movie-posters/spiderman_brand-new-day.jfif" alt="póster de la película Spiderman: Brand New Day"></li>
-                    <li class = "home-movies-preview__card"><img src="assets/movie-posters/madoka-magica.jfif" alt="póster de la película Puella Magi Madoka Magica: Walpurgisnacht Rising"></li>
-                    <li class = "home-movies-preview__card"><img src="assets/movie-posters/verity.jfif" alt="póster de la Verity: La Sombra de un Engaño"></li>
-                </ul>
-            </div>
+            <ul class="movies-preview">
+                <li class="movies-preview__card"><img src="assets/movie-posters/avengers-endgame.jfif"
+                        alt="póster de la película Avengers: Endgame"></li>
+                <li class="movies-preview__card"><img src="assets/movie-posters/spiderman_brand-new-day.jfif"
+                        alt="póster de la película Spiderman: Brand New Day"></li>
+                <li class="movies-preview__card"><img src="assets/movie-posters/madoka-magica.jfif"
+                        alt="póster de la película Puella Magi Madoka Magica: Walpurgisnacht Rising"></li>
+                <li class="movies-preview__card"><img src="assets/movie-posters/verity.jfif"
+                        alt="póster de la Verity: La Sombra de un Engaño"></li>
+                <li class="movies-preview__card"><img src="../assets/movie-posters/street-fighter.jfif"
+                        alt="póster de la Verity: La Sombra de un Engaño">
+                </li>
+                <li class="movies-preview__card"><img src="../assets/movie-posters/hunger_games-sinsajo_parte_2.jfif"
+                        alt="póster de la Verity: La Sombra de un Engaño">
+                </li>
+            </ul>
         </section>
     </main>
 
@@ -70,6 +108,5 @@
         <p class="footer__copyright">Kinoura &copy Perú 2026. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
-
-

@@ -206,6 +206,11 @@ footer {
 
 
 /* ------------------ ABOUT -------------------- */
+
+.about-title {
+    display: none;
+}
+
 /* BANNER */
 .wide-banner {
     height: 420px;
@@ -251,12 +256,13 @@ footer {
     margin: 25px 25px 0 25px;
 }
 
-.about-title {
-    display: none;
-}
-
 .about-container h2 {
     margin: 0.5rem 0;
+}
+
+/* Sections */
+.about-section__text strong {
+    font-weight: 600;
 }
 
 .about-section {
@@ -276,7 +282,7 @@ footer {
     margin-top: 1rem;
 }
 
-
+/* Cards */
 .about-section__team .card--team {
     margin: auto;
     margin-bottom: 20px;
@@ -304,9 +310,6 @@ footer {
     margin-bottom: 8px;
 }
 
-.about-section__text strong {
-    font-weight: 600;
-}
 
 /* DEVICE: Tablet */
 @media (min-width: 768px) {
