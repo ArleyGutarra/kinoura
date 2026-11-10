@@ -227,7 +227,7 @@ footer {
     gap: 70px 40px;
 }
 
-.card {
+.my-card {
     text-align: center;
 }
 
@@ -235,7 +235,7 @@ footer {
     text-align: justify;
 }
 
-.card img {
+.my-card img {
     width: 100%;
     margin-bottom: 10px;
 }
