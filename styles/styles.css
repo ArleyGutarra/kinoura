@@ -39,32 +39,53 @@ body {
     background-color: var(--color-background);
 }
 
-.navbar-container,
-.navbar-block,
-.navbar-tools {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: revert;
+    font-weight: revert;
 }
 
-.navbar {
-    display: flex;
-    flex-flow: column nowrap;
+/*      NAVBAR      */
+/* General */
+nav.main-navbar {
+    background-color: var(--color-background);
+    padding: 0 12px;
 }
 
-.navbar-container {
-    padding: 8px 10px;
+p.drawer-title {
+    font-weight: 500;
 }
 
-.navbar-tools {
-    list-style: none;
+.navbar-brand img {
+    height: 1.6rem;
+    /* logo */
 }
 
-.navbar-tools a {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
+/* Mobile */
+.drawer-header,
+.drawer-body {
+    padding: 16px;
+}
+
+.nav-link {
+    padding: 6px 8px;
+}
+
+.drawer-header .btn-close {
+    margin-block: calc(-.5 * var(--bs-drawer-padding-y));
+    margin-inline-start: auto;
+}
+
+.nav-link {
+    color: var(--bs-theme-fg, var(--bs-nav-link-color));
+}
+
+.active {
+    color: #fff;
 }
 
 .material-symbols-outlined {
@@ -72,55 +93,6 @@ body {
     font-size: 1.7rem;
     color: #ccc;
 }
-
-/* Toggle Menu */
-
-/* Ocultamos el checkbox sin deshabilitarlo */
-.menu-toggle {
-    position: absolute;
-    /**/
-    opacity: 0;
-    pointer-events: none;
-}
-
-.mobile-menu {
-    display: none;
-    background-color: #1d1d1d;
-    font-size: 1.2rem;
-}
-
-.navbar ul {
-    list-style: none;
-    text-align: center;
-}
-
-.navbar a {
-    text-decoration: none;
-}
-
-.mobile-menu a {
-    font-weight: 500;
-}
-
-.navbar:has(.menu-toggle:checked) .mobile-menu {
-    display: flex;
-    justify-content: center;
-}
-
-.desktop-menu {
-    display: none;
-}
-
-.navbar__logo {
-    font-size: 0;
-    height: 1.8rem;
-    margin: 0 0.5rem;
-}
-
-.navbar__logo img {
-    height: 1.8rem;
-}
-
 
 /*      FOOTER      */
 footer {
@@ -631,7 +603,8 @@ form {
 @media (min-width: 1280px) {
 
     /* ------------ desktop-GENERAL ------------- */
-    .navbar-container {
+    /* ------ desktop-home-navbar ------ */
+    nav.main-navbar {
         border-bottom: var(--color-divider) solid 1px;
     }
 

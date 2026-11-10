@@ -5,61 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinoura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
+<!-- 
+<li><a href="./pages/peliculas.html">Películas</a></li>
+<li><a href="./pages/cines.html">Cines</a></li>
+<li><a href="./pages/promociones.html">Promociones</a></li>
+<li><a href="./pages/nosotros.html">Nosotros</a></li> 
+-->
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <div class="navbar-block">
-                    <!-- Control que guarda el estado del menú -->
-                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <nav class="main-navbar navbar md:navbar-expand bg-1" data-bs-theme="dark">
+            <div class="container-fluid">
+                <!-- Main Heading: Kinoura -->
+                <a class="navbar-brand" href="#"><img src="./assets/kinoura-logo-white.png"
+                        alt="Botón a Home con el logo de Kinoura"></a>
 
-                    <!-- Botón hamburguesa -->
-                    <label for="menu-toggle" class="material-symbols-outlined menu-toggle-icon">menu</label>
+                <!-- Icono de Menu Hamburgesa-->
+                <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer"
+                    data-bs-target="#navbarDarkDrawer" aria-controls="navbarDarkDrawer" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
 
-                    <div class="navbar__logo">
-                        <a href="#"><img src="../assets/kinoura-logo-white.png"
-                                alt="logo del sitio web kinoura y enlace a la página principal"></a>
+                <dialog class="drawer drawer-end" tabindex="-1" id="navbarDarkDrawer"
+                    aria-labelledby="navbarDarkDrawerLabel">
+                    <div class="drawer-header">
+                        <p class="drawer-title" id="navbarDarkDrawerLabel">Menu</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
                     </div>
-
-                    <div class="desktop-menu">
-                        <ul>
-                            <li><a href="./pages/peliculas.html">Películas</a></li>
-                            <li><a href="./pages/cines.html">Cines</a></li>
-                            <li><a href="./pages/promociones.html">Promociones</a></li>
-                            <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                    <div class="drawer-body mb-2 md:mb-0">
+                        <ul class="nav navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/cines.html">Cines</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/peliculas.html">Películas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/promociones.html">Promociones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                                <!-- Clase para seleccionar: active -->
+                            </li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="navbar-block">
-                    <ul class="navbar-tools">
-                        <li><span class="material-symbols-outlined">search</span></li>
-                        <li><span class="material-symbols-outlined">person</span></li>
-                        <li><span class="material-symbols-outlined">notifications</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Recator opportunity: ¿Cómo hago para que al hacer clic y se muestre el menú, esto se ponga encima del banner y no lo desplace? -->
-            <div class="mobile-menu">
-                <ul>
-                    <li><a href="./pages/peliculas.html">Películas</a></li>
-                    <li><a href="./pages/cines.html">Cines</a></li>
-                    <li><a href="./pages/promociones.html">Promociones</a></li>
-                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
-                </ul>
+                </dialog>
             </div>
         </nav>
     </header>
 
     <main>
         <div class="banner">
-            <img class="banner--mobile" src="../assets/banners/mobile/Combo-Street-Fighter_Banner-Web-Mobile.png"
+            <img class="banner--mobile" src="./assets/banners/mobile/Combo-Street-Fighter_Banner-Web-Mobile.png"
                 alt="Baner publicitario mostrando la promoción: Combo Street Fighter">
-            <img class="banner--desktop" src="../assets/banners/Combo-Street-Fighter_Banner-Web.png"
+            <img class="banner--desktop" src="./assets/banners/Combo-Street-Fighter_Banner-Web.png"
                 alt="Baner publicitario mostrando la promoción: Combo Street Fighter">
         </div>
 
@@ -80,18 +84,18 @@
             cambiar las películas que se muestren, pero la estructura sería la misma.
             -->
             <ul class="movies-preview">
-                <li class="movies-preview__card"><img src="assets/movie-posters/avengers-endgame.jfif"
+                <li class="movies-preview__card"><img src="./assets/movie-posters/avengers-endgame.jfif"
                         alt="póster de la película Avengers: Endgame"></li>
-                <li class="movies-preview__card"><img src="assets/movie-posters/spiderman_brand-new-day.jfif"
+                <li class="movies-preview__card"><img src="./assets/movie-posters/spiderman_brand-new-day.jfif"
                         alt="póster de la película Spiderman: Brand New Day"></li>
-                <li class="movies-preview__card"><img src="assets/movie-posters/madoka-magica.jfif"
+                <li class="movies-preview__card"><img src="./assets/movie-posters/madoka-magica.jfif"
                         alt="póster de la película Puella Magi Madoka Magica: Walpurgisnacht Rising"></li>
-                <li class="movies-preview__card"><img src="assets/movie-posters/verity.jfif"
+                <li class="movies-preview__card"><img src="./assets/movie-posters/verity.jfif"
                         alt="póster de la Verity: La Sombra de un Engaño"></li>
-                <li class="movies-preview__card"><img src="../assets/movie-posters/street-fighter.jfif"
+                <li class="movies-preview__card"><img src="./assets/movie-posters/street-fighter.jfif"
                         alt="póster de la Verity: La Sombra de un Engaño">
                 </li>
-                <li class="movies-preview__card"><img src="../assets/movie-posters/hunger_games-sinsajo_parte_2.jfif"
+                <li class="movies-preview__card"><img src="./assets/movie-posters/hunger_games-sinsajo_parte_2.jfif"
                         alt="póster de la Verity: La Sombra de un Engaño">
                 </li>
             </ul>
@@ -108,5 +112,8 @@
         <p class="footer__copyright">Kinoura &copy Perú 2026. Todos los derechos reservados.</p>
     </footer>
 </body>
+<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+    crossorigin="anonymous"></script>
 
 </html>
