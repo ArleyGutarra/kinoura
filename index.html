@@ -60,11 +60,55 @@
     </header>
 
     <main>
-        <div class="banner">
-            <img class="banner--mobile" src="./assets/banners/mobile/Combo-Street-Fighter_Banner-Web-Mobile.png"
-                alt="Baner publicitario mostrando la promoción: Combo Street Fighter">
-            <img class="banner--desktop" src="./assets/banners/Combo-Street-Fighter_Banner-Web.png"
-                alt="Baner publicitario mostrando la promoción: Combo Street Fighter">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-autoplay="true" data-bs-pause="hover">
+            <div class="carousel-inner">
+                <!-- Imágenes del Carrusel -->
+                <div class="carousel-item active " data-bs-interval="2000">
+                    <!-- data-bs-interval="2000" controla el tiempo (2s) -->
+                    <img src="./assets/banners/Combo-Street-Fighter_Banner-Web.png" class="d-block w-100 rounded-5"
+                        alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./assets/banners/hot_dog_prime_banner_web_desktop.jpg" class="d-block w-100 rounded-5"
+                        alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./assets/banners/preventa_arirang_web-desktop.jpg" class="d-block w-100 rounded-5"
+                        alt="...">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Indicador de Slide del Carrusel -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Controles del Carrusel -->
+                <div>
+                    <button class="btn-icon btn-sm carousel-control-play-pause" type="button"
+                        data-bs-target="#carouselExampleAutoplaying" aria-label="Pause" data-bs-pause-label="Pause"
+                        data-bs-play-label="Play">
+                        <span class="carousel-icon-pause" aria-hidden="true"></span>
+                        <span class="carousel-icon-play" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-icon-prev" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-icon-next" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
         </div>
 
         <section class="home-movies-container">
