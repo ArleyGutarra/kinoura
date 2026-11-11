@@ -216,21 +216,24 @@ footer {
 /* ------------------ HOME ----------------- */
 /* ----------------------------------------- */
 
+.drawer-body {
+    padding: 0 16px;
+    /* Reduce el ancho del Navbar */
+}
+
+
+
 /* BANNER */
-.banner {
-    width: 100%;
-    margin-bottom: 3rem;
-}
-
-.banner img {
-    width: inherit;
-}
-
-.banner--desktop {
+.carousel__image--desktop {
     display: none;
 }
 
-
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+}
 
 /*      MOVIES (MAIN)     */
 .home-movies-container {
@@ -511,23 +514,12 @@ form {
     /* ------------ tablet-HOME ------------- */
 
     /* ------ tablet-home-banner ------ */
-    .banner--mobile {
+    .carousel__image--mobile {
         display: none;
     }
 
-    .banner {
-        width: 100%;
-        height: 40vh;
-        max-height: 800px;
-        overflow: hidden;
-    }
-
-    img.banner--desktop {
+    .carousel__image--desktop {
         display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
     }
 
     /* ------ tablet-home-movies ------ */
@@ -610,19 +602,20 @@ form {
 
     /* -------------- tablet-HOME -------------- */
     /* ------ desktop-home-banner ------ */
-    .banner {
-        display: flex;
-        justify-content: center;
-        height: 370px;
-        margin: 40px 0 50px;
-        overflow: visible;
+    .carousel {
+        width: 1120px;
+        height: 500px;
+        margin: auto;
+        margin-top: 2rem;
     }
 
-    img.banner--desktop {
-        width: 960px;
-        height: 370px;
-        border-radius: 15px;
-        border: var(--color-divider) solid 1px;
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        border: #fff solid 1px;
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: 0 50%;
     }
 
     /* ------ desktop-home-movies ------ */

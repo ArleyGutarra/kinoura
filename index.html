@@ -9,12 +9,6 @@
         integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<!-- 
-<li><a href="./pages/peliculas.html">Películas</a></li>
-<li><a href="./pages/cines.html">Cines</a></li>
-<li><a href="./pages/promociones.html">Promociones</a></li>
-<li><a href="./pages/nosotros.html">Nosotros</a></li> 
--->
 
 <body>
     <header>
@@ -60,21 +54,30 @@
     </header>
 
     <main>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-autoplay="true" data-bs-pause="hover">
+        <div id="carouselAutoplaying" class="carousel slide" data-bs-autoplay="true" data-bs-pause="hover"
+            data-bs-theme="dark">
             <div class="carousel-inner">
                 <!-- Imágenes del Carrusel -->
                 <div class="carousel-item active " data-bs-interval="2000">
                     <!-- data-bs-interval="2000" controla el tiempo (2s) -->
-                    <img src="./assets/banners/Combo-Street-Fighter_Banner-Web.png" class="d-block w-100 rounded-5"
-                        alt="...">
+                    <img class="carousel__image--mobile"
+                        src="./assets/banners/mobile/Combo-Street-Fighter_Banner-Web-Mobile.png"
+                        class="d-block w-100 rounded-5" alt="...">
+                    <img class="carousel__image--desktop" src="./assets/banners/Combo-Street-Fighter_Banner-Web.png"
+                        class="d-block w-100 rounded-5" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="./assets/banners/hot_dog_prime_banner_web_desktop.jpg" class="d-block w-100 rounded-5"
-                        alt="...">
+                    <img class="carousel__image--mobile"
+                        src="./assets/banners/mobile/HOT_DOG_PRIME_banner_web_mobile_937x1424px.jpg"
+                        class="d-block w-100 rounded-5" alt="...">
+                    <img class="carousel__image--desktop" src="./assets/banners/hot_dog_prime_banner_web_desktop.jpg"
+                        class="d-block w-100 rounded-5" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="./assets/banners/preventa_arirang_web-desktop.jpg" class="d-block w-100 rounded-5"
-                        alt="...">
+                    <img class="carousel__image--mobile" src="./assets/banners/mobile/preventa_arirang_web-mobile.jpg"
+                        class="d-block w-100 rounded-5" alt="...">
+                    <img class="carousel__image--desktop" src="./assets/banners/preventa_arirang_web-desktop.jpg"
+                        class="d-block w-100 rounded-5" alt="...">
                 </div>
             </div>
 
