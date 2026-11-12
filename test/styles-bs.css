@@ -6,6 +6,7 @@
 
 /* Material Icons */
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search,person,notifications,tune');
+
 .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
@@ -35,4 +36,32 @@ body {
 
 .main-navbar {
     border-bottom: var(--color-divider) solid 1px;
+}
+
+/*    BANNER    */
+.banner-container {
+    margin: auto;
+    width: 80vw;
+    height: 400px;
+    border: #f00 solid 2px;
+    background-color: slateblue;
+}
+
+.banner-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+    .banner-container {
+        width: 100vw;
+        border: none;
+    }
+
+    .banner-container img {
+        border-radius: 0px;
+        object-fit: cover;
+    }
 }
