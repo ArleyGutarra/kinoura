@@ -50,7 +50,6 @@ h6 {
 }
 
 /*      NAVBAR      */
-/* General */
 nav.main-navbar {
     background-color: var(--color-background);
     padding: 0 12px;
@@ -63,6 +62,23 @@ p.drawer-title {
 .navbar-brand img {
     height: 1.6rem;
     /* logo */
+}
+
+.nav-item {
+    border-radius: 15px;
+    transition: background-color 0.5s;
+}
+
+.nav-item:focus {
+    outline-color: #fff;
+}
+
+.nav-link:focus {
+    outline-color: #fff;
+}
+
+.nav-item:hover {
+    background-color: var(--color-surface);
 }
 
 /* Mobile */
@@ -251,6 +267,11 @@ footer {
     border-style: none;
     margin: 10px 0.1rem;
     padding: 10px 0px;
+}
+
+.movies-tabs__tab:active {
+    box-sizing: border-box;
+    border-bottom: var(--color-divider) solid 3px;
 }
 
 .movies-tabs__tab-selected {
@@ -468,6 +489,75 @@ form {
     margin-bottom: 8px;
 }
 
+/* Contáctanos */
+.about-container--contact-us {
+    background-color: #21211a;
+}
+
+.about-container--contact-us .about-section {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.about-container--contact-us h2 {
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0;
+}
+
+.contact-us--heading {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.contact-us__form {
+    width: 95%;
+    margin: 1 rem 0;
+}
+
+form .mb-3,
+form .form-field {
+    margin: 1rem 0;
+    gap: 0;
+}
+
+.about-section .btn-solid {
+    margin: auto;
+}
+
+input,
+textarea {
+    color: var(--color-background);
+    font-weight: 500;
+    padding: 5px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
+
+input:focus,
+textarea:focus {
+    outline-color: var(--color-primary);
+}
+
+
+.btn-solid {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0;
+    background-color: var(--color-accent);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn-solid:hover,
+.btn-solid:active {
+    background-color: #7f211e;
+}
 
 /* ----------------------------------------- */
 /* ------------- MEDIA QUERIES ------------- */
@@ -589,6 +679,11 @@ form {
         /* deshace el border heredado */
         border-left: var(--color-primary) solid 10px;
     }
+
+    /* Contact Us */
+    .contact-us__form {
+        width: 600px;
+    }
 }
 
 /* ------------ #Media: Desktop ------------ */
@@ -627,7 +722,6 @@ form {
     .movies-tabs__tab:hover {
         box-sizing: border-box;
         border-bottom: var(--color-divider) solid 3px;
-        /* font-weight: 500; */
     }
 
     .movies-preview__card img {
