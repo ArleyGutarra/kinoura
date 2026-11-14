@@ -684,10 +684,82 @@ textarea:focus {
     .contact-us__form {
         width: 600px;
     }
+
+    /* GRID - LAYOUT (for Movies) */
+    .container {
+        display: grid;
+        margin: auto;
+        max-width: 1070px;
+        grid-template-columns: 225px 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "heading heading"
+            "sidebar content"
+    }
+
+    .heading {
+        grid-area: heading;
+        border-bottom: var(--color-divider) solid 1px;
+        /* divider, 1px*/
+    }
+
+    .heading h1 {
+        font-size: 3rem;
+        padding-top: 20px;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        ;
+        box-sizing: content-box;
+        padding-right: 20px;
+    }
+
+    .sidebar p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+
+    .sidebar details {
+        user-select: none;
+        /* Non-selectable element*/
+        border-bottom: var(--color-divider) solid 1px;
+        padding: 5px 0;
+        font-weight: 300;
+    }
+
+    .sidebar summary {
+        user-select: none;
+        /* Non-selectable element*/
+        font-weight: 600;
+        padding: 5px 0;
+    }
+
+    .sidebar details label {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .sidebar details input {
+        margin: 8px;
+        /* Separation of the checkbox */
+    }
+
+    .content {
+        grid-area: content;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        padding: 30px 10px 30px;
+        gap: 30px 10px;
+        border-left: var(--color-divider) solid 1px;
+    }
 }
 
 /* ------------ #Media: Desktop ------------ */
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 
     /* ------------ desktop-GENERAL ------------- */
     /* ------ desktop-home-navbar ------ */
