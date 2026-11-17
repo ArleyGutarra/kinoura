@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    background-color: #222;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: royalblue;
+    transition: 0.4s;
+}
+
+.box:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 10px 5px #fff9;
+}
