@@ -176,6 +176,15 @@ footer {
     padding: 15px 0 5px;
 }
 
+.sidebar label {
+    padding: 0 5px;
+}
+
+.sidebar input {
+    margin: 5px;
+    /* Separation of the checkbox */
+}
+
 .two-column-layout__sidefilter p {
     display: inline-block;
     font-size: 1.2rem;
@@ -342,45 +351,58 @@ form {
 /* ----------------------------------------- */
 /* --------------- PELÍCULAS --------------- */
 /* ----------------------------------------- */
-.movies-tabs--movies {
-    text-align: end;
+
+/* RESPONSIVE LAYOUT*/
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 20px;
 }
 
-.two-column-layout__heading--movies {
-    padding-bottom: 0;
-}
-
-.two-column-layout__content--movies {
-    justify-content: center;
-    gap: 30px 25px;
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 30px;
+    gap: 30px;
 }
 
 .card--movie {
-    width: 250px;
-    border-radius: 10px;
-    background-color: var(--color-surface);
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: transparent;
+}
+
+.card--movie {
+    width: 100%;
+    margin: auto;
 }
 
 .card--movie img {
-    width: 100%;
-    height: 370px;
-    object-fit: cover;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    object-position: top center;
     margin-bottom: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
-.card--movie p {
-    padding: 0 12px;
-    padding-bottom: 20px;
+.card--movie .movie-info {
+    padding: 0 20px;
+    text-align: start;
 }
 
-
-/* Check this part */
-.two-column-layout__container {
-    margin: auto;
-    max-width: 1070px;
+.movie-info h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
+
+.movie-info p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
 
 /* ----------------------------------------- */
 /* --------------- NOSOTROS ---------------- */
@@ -709,6 +731,11 @@ textarea:focus {
         padding-top: 20px;
     }
 
+    .movies-tabs--movies {
+        text-align: end;
+    }
+
+
     .sidebar {
         grid-area: sidebar;
         ;
@@ -755,6 +782,36 @@ textarea:focus {
         padding: 30px 10px 30px;
         gap: 30px 10px;
         border-left: var(--color-divider) solid 1px;
+    }
+
+    /* Movie Cards */
+    .my-card {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .card--movie {
+        width: 230px;
+        border-radius: 10px;
+        background-color: var(--color-surface);
+    }
+
+    .card--movie img {
+        width: 100%;
+        height: 370px;
+        object-fit: cover;
+        margin-bottom: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .card--movie .movie-info {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .card--movie h2 {
+        font-size: 1.4rem;
     }
 }
 
