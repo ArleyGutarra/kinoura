@@ -44,7 +44,6 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./nosotros.html">Nosotros</a>
-                                <!-- Clase para seleccionar: active -->
                             </li>
                         </ul>
                     </div>
@@ -54,27 +53,25 @@
     </header>
 
     <main>
-        <section class="two-column-layout__container">
-            <div class="two-column-layout__heading">
+        <section class="container">
+            <div class="heading">
                 <h1>Cines</h1>
-                <div class="sort-by">
+                <div class="sort-by"> <!-- configure this-->
                     <p>Ordenar por:</p>
                     <div class="sort-by--options">
                         <form>
-                            <input type="radio" id="sort-rating" name="sort-by" value="rating">
-                            <label for="sort-rating">Popularidad</label>
-                            <input type="radio" id="sort-price" name="sort-by" value="price">
-                            <label for="sort-price">Precio</label>
-                            <input type="radio" id="sort-nearby" name="sort-by" value="nearby">
-                            <label for="sort-nearby">Cercanía</label>
+                            <label><input type="radio" id="sort-rating" name="sort-by"
+                                    value="rating">Popularidad</label>
+                            <label><input type="radio" id="sort-price" name="sort-by" value="price">Precio</label>
+                            <label><input type="radio" id="sort-nearby" name="sort-by" value="nearby">Cercanía</label>
                         </form>
                     </div>
                 </div>
             </div>
 
-            <div class="two-column-layout__sidefilter-content-container">
-                <aside class="two-column-layout__sidefilter">
-                    <div class="sidefilter-title"> <!-- rename class - integrate into BEM -->
+            <div class="sidebar">
+                <div class="sidebar">
+                    <div class="sidefilter-title">
                         <span class="material-symbols-outlined">tune</span>
                         <p>FILTROS:</p>
                     </div>
@@ -97,52 +94,58 @@
                         <summary>Precio</summary>
                         <label><input type="range" name="price" min="1" max="70"></label>
                     </details>
-                </aside>
+                </div>
+            </div>
 
-                <div class="two-column-layout__content">
-                    <div class="my-card card--cinema">
-                        <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
-                        <h2>Cinema X</h2>
-                        <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
-                    </div>
+            <div class="content"> <!-- here, below-->
+                <div class="my-card card--cinema">
+                    <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                </div>
 
-                    <div class="my-card card--cinema">
-                        <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
-                        <h2>Cinema X</h2>
-                        <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
-                    </div>
-                    <div class="my-card card--cinema">
-                        <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
-                        <h2>Cinema X</h2>
-                        <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
-                    </div>
-                    <div class="my-card card--cinema">
-                        <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
-                        <h2>Cinema X</h2>
-                        <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
-                    </div>
-                    <div class="my-card card--cinema">
-                        <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
-                        <h2>Cinema X</h2>
-                        <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
-                    </div>
-                    <div class="my-card card--cinema">
-                        <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
-                        <h2>Cinema X</h2>
-                        <p>4.35 ★ | s/. 10 - 20</p>
-                        <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
-                    </div>
+                <div class="my-card card--cinema">
+                    <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                </div>
+                <div class="my-card card--cinema">
+                    <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                </div>
+                <div class="my-card card--cinema">
+                    <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                </div>
+                <div class="my-card card--cinema">
+                    <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
+                </div>
+                <div class="my-card card--cinema">
+                    <img src="../assets/cinemas/cine-1.png" alt="foto del cine X">
+                    <h2>Cinema X</h2>
+                    <p>4.35 ★ | s/. 10 - 20</p>
+                    <p class="my-card card--cinema__description">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing
+                        elit asdjoaijsdo asdajsdij aoisdjoaijs.</p>
                 </div>
             </div>
 

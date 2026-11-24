@@ -174,6 +174,7 @@ footer {
     flex-direction: row;
     align-items: center;
     padding: 15px 0 5px;
+    font-weight: 500;
 }
 
 .sidebar label {
@@ -225,6 +226,7 @@ footer {
 }
 
 .my-card {
+    margin: auto;
     text-align: center;
 }
 
@@ -309,6 +311,32 @@ footer {
 
 /* SORT BY */
 .sort-by {
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.sort-by p,
+.horizontal-filter,
+form {
+    display: inline-block;
+    font-weight: 300;
+}
+
+.sort-by--options form {
+    display: flex;
+    gap: 15px;
+}
+
+.sort-by--options form label {
+    display: flex;
+    gap: 5px;
+}
+
+.sort-by p {
+    font-weight: 600;
+}
+
+/* .sort-by {
     text-align: end;
 }
 
@@ -326,11 +354,12 @@ form {
 
 .sort-by p {
     font-weight: 600;
-}
+} */
 
 /* CARDS */
 .card--cinema {
-    width: 45%;
+    width: min(90%, 340px);
+    text-align: center;
 }
 
 /* ----------------------------------------- */
@@ -364,7 +393,7 @@ form {
     display: flex;
     flex-flow: column nowrap;
     padding-top: 30px;
-    gap: 30px;
+    gap: 50px;
 }
 
 .card--movie {
@@ -812,6 +841,18 @@ textarea:focus {
 
     .card--movie h2 {
         font-size: 1.4rem;
+    }
+
+    /* ------------ tablet-CINES ------------ */
+    .sort-by {
+        text-align: end;
+        margin-top: 0;
+        padding: 0 0 15px 0;
+    }
+
+    .sort-by--options {
+        display: flex;
+        justify-content: end;
     }
 }
 
