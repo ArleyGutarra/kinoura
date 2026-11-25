@@ -358,7 +358,7 @@ form {
 
 /* CARDS */
 .card--cinema {
-    width: min(90%, 340px);
+    width: min(90%, 320px);
     text-align: center;
 }
 
@@ -366,11 +366,17 @@ form {
 /* --------------- PROMOCIONES ------------- */
 /* ----------------------------------------- */
 .card--promotion {
-    width: 38%;
+    width: min(90%, 280px);
+    text-align: center;
+    margin: auto;
 }
 
 .card--promotion img {
     border: #ccc solid 1px;
+}
+
+.card--promotion h2 {
+    font-size: 1.3rem;
 }
 
 .two-column-layout__content--promotions {
@@ -490,6 +496,10 @@ form {
 }
 
 /* Sections */
+.about-section__text {
+    text-align: justify;
+}
+
 .about-section__text strong {
     font-weight: 600;
 }
@@ -502,6 +512,7 @@ form {
 
 .about-section:nth-child(2) img {
     order: 2;
+    margin-bottom: 15px;
     /* Mostrar la imagen luego del texto*/
 }
 
@@ -854,6 +865,23 @@ textarea:focus {
         display: flex;
         justify-content: end;
     }
+
+    /* ------------- tablet-PROMOCIONES ------------- */
+    .heading--promotions {
+        padding-bottom: 15px;
+    }
+
+    .content--promotions {
+        gap: 50px 20px;
+    }
+
+    .card--promotion {
+        margin: 0;
+    }
+
+    .card--promotion h2 {
+        font-size: 1.4rem;
+    }
 }
 
 /* ------------ #Media: Desktop ------------ */
@@ -865,7 +893,7 @@ textarea:focus {
         border-bottom: var(--color-divider) solid 1px;
     }
 
-    /* -------------- tablet-HOME -------------- */
+    /* -------------- desktop-HOME -------------- */
     /* ------ desktop-home-banner ------ */
     .carousel {
         width: 1120px;
