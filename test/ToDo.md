@@ -6,8 +6,6 @@
 
 - Considerá aplicar **grid-template-areas** también en la sección compleja de **nosotros.html** para reforzar el criterio de grilla en más de una página.
 
-- Breakpoints: 1024px
-
 - Validar en el navegador a: 320px, 768px, 1024px
 
 # Pre-Entrega 5
