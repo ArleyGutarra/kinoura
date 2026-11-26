@@ -1,0 +1,990 @@
+/* --------------- IMPORTS- --------------- */
+
+/* Monserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Montserrat", sans-serif; */
+
+/* Material Icons */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu,search,person,notifications,tune');
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -------------- VARIABLES --------------- */
+
+/* Color Palette */
+:root {
+    --color-background: #101000;
+    --color-surface: #2a2a2a;
+    --color-divider: #808080;
+    --color-primary: #7f211e;
+    --color-accent: #e53935;
+}
+
+/* ----------------------------------------- */
+/* ---------------- GLOBAL ----------------- */
+/* ----------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+form,
+details {
+    color-scheme: dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: revert;
+    font-weight: revert;
+}
+
+/*      NAVBAR      */
+nav.main-navbar {
+    background-color: var(--color-background);
+    padding: 0 12px;
+}
+
+.navbar-brand img {
+    height: 1.6rem;
+    /* logo */
+}
+
+.nav-item {
+    border-radius: 15px;
+    transition: background-color 0.5s;
+}
+
+.nav-item:focus {
+    outline-color: #fff;
+}
+
+.nav-link:focus {
+    outline-color: #fff;
+}
+
+.nav-item:hover {
+    background-color: var(--color-surface);
+}
+
+.nav-link {
+    padding: 6px 8px;
+    color: var(--bs-navbar-color, rgba(255, 255, 255, 0.75));
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+.navbar-collapse {
+    padding: 0.5rem 0;
+}
+
+.main-navbar .offcanvas {
+    --bs-offcanvas-width: min(85vw, 320px);
+    --bs-offcanvas-bg: var(--color-background);
+    --bs-offcanvas-color: #fff;
+    background-color: var(--color-background);
+    color: #fff;
+}
+
+.main-navbar .offcanvas .offcanvas-header {
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.main-navbar .offcanvas .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.main-navbar .offcanvas .offcanvas-body {
+    padding-top: 1rem;
+}
+
+button.navbar-toggler {
+    border: none;
+}
+
+nav.main-navbar.navbar.navbar-expand-md.bg-1 {
+    padding: 5px 0;
+}
+
+.offcanvas-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.active {
+    color: #fff;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 60;
+    font-size: 1.7rem;
+    color: #ccc;
+}
+
+/*      FOOTER      */
+footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 30px 30px 20px;
+    margin-top: 10vh;
+}
+
+.footer_links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_links-list a {
+    text-decoration: none;
+    display: block;
+    color: #aaa;
+    padding: 5px 0;
+}
+
+.footer__copyright {
+    margin-top: 20px;
+}
+
+/*      TWO-COLUMN LAYOUT       */
+/* Filters */
+.sidefilter-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0 5px;
+    font-weight: 500;
+}
+
+.sidebar label {
+    padding: 0 5px;
+}
+
+.sidebar input {
+    margin: 5px;
+    /* Separation of the checkbox */
+}
+
+/* CARDS */
+.my-card {
+    margin: auto;
+    text-align: center;
+}
+
+.card__description {
+    text-align: justify;
+}
+
+.my-card img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* ----------------------------------------- */
+/* ------------------ HOME ----------------- */
+/* ----------------------------------------- */
+
+/* BANNER */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+}
+
+.carousel__image--mobile {
+    display: block;
+}
+
+.carousel__image--desktop {
+    display: none;
+}
+
+.carousel {
+    margin-bottom: 1.5rem;
+}
+
+/*      MOVIES (MAIN)     */
+.home-movies-container {
+    margin: 0 1rem;
+}
+
+.home-movies-container h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.movies-tabs {
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(7px, 10px, 12px);
+}
+
+.movies-tabs__tab {
+    margin-top: 0;
+}
+
+/* Movie Tabs */
+.movies-tabs__tab {
+    box-sizing: border-box;
+    background: inherit;
+    font-family: inherit;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    border-style: none;
+    padding: 10px 0px;
+}
+
+.movies-tabs__tab:active {
+    box-sizing: border-box;
+    border-bottom: var(--color-divider) solid 3px;
+}
+
+.movies-tabs__tab-selected {
+    box-sizing: border-box;
+    font-weight: 550;
+    border-bottom: 3px solid #fff;
+}
+
+/* Movies Preview */
+.movies-preview {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.movies-preview__card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+/* ----------------------------------------- */
+/* ----------------- CINES ----------------- */
+/* ----------------------------------------- */
+
+/* SORT BY */
+.sort-by {
+    margin-top: 15px;
+}
+
+.sort-by p,
+.sidefilter-title p {
+    margin-bottom: 0;
+}
+
+.sidefilter-title p {
+    font-size: 1.15rem;
+}
+
+.material-symbols-outlined {
+    padding-right: 5px;
+}
+
+.sort-by p,
+.horizontal-filter,
+form {
+    display: inline-block;
+    font-weight: 300;
+}
+
+.sort-by--options form {
+    display: flex;
+    gap: 15px;
+}
+
+.sort-by--options form label {
+    display: flex;
+    gap: 5px;
+}
+
+.sort-by p {
+    font-weight: 600;
+}
+
+/* CARDS */
+.card--cinema {
+    width: min(90%, 320px);
+    text-align: center;
+}
+
+/* ----------------------------------------- */
+/* --------------- PROMOCIONES ------------- */
+/* ----------------------------------------- */
+.card--promotion {
+    width: min(90%, 280px);
+    text-align: center;
+    margin: auto;
+}
+
+.card--promotion img {
+    border: #ccc solid 1px;
+}
+
+.card--promotion h2 {
+    font-size: 1.3rem;
+}
+
+
+/* ----------------------------------------- */
+/* --------------- PELÍCULAS --------------- */
+/* ----------------------------------------- */
+
+/* RESPONSIVE LAYOUT*/
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 20px;
+}
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 30px;
+    gap: 50px;
+}
+
+.card--movie {
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: transparent;
+}
+
+.card--movie {
+    width: 100%;
+    margin: auto;
+}
+
+.card--movie img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    object-position: top center;
+    margin-bottom: 0;
+}
+
+.card--movie .movie-info {
+    padding: 0 20px;
+    text-align: start;
+}
+
+.movie-info h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.movie-info p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+
+/* ----------------------------------------- */
+/* --------------- NOSOTROS ---------------- */
+/* ----------------------------------------- */
+
+.about-title {
+    display: none;
+}
+
+/* BANNER */
+.wide-banner {
+    height: 420px;
+
+    background-image: url("../assets/about/banner-about.jfif");
+    background-size: cover;
+    background-position: 75% 50%;
+
+    position: relative;
+    /* important for the overlay */
+}
+
+/* Overlay */
+.wide-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* background-color: rgb(0 0 0 / 0.25); */
+    background: linear-gradient(to bottom,
+            rgb(0 0 0 / 0.50) 0%,
+            rgb(0 0 0 / 0.20) 30%,
+            rgb(0 0 0 / 0.10) 100%);
+}
+
+.wide-banner__slogan {
+    position: relative;
+    /* important for the overlay */
+    top: 1rem;
+    left: 1rem;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.wide-banner__slogan b {
+    color: var(--color-accent);
+}
+
+/* CONTENT */
+.about-container {
+    margin: 25px 25px 0 25px;
+}
+
+.about-container h2 {
+    margin: 0.5rem 0;
+}
+
+/* Sections */
+.about-section__text {
+    text-align: justify;
+}
+
+.about-section__text strong {
+    font-weight: 600;
+}
+
+.about-section {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 20px;
+}
+
+.about-section:nth-child(2) img {
+    order: 2;
+    margin-bottom: 15px;
+    /* Mostrar la imagen luego del texto*/
+}
+
+.about-section img {
+    width: 100%;
+    object-fit: contain;
+    margin-top: 1rem;
+}
+
+
+/* Cards */
+.about-section__team .card--team {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.card--team {
+    width: 90%;
+    text-align: center;
+}
+
+.about-section .card--team img {
+    width: min(100%, 290px);
+    margin-top: 0;
+    filter: grayscale(0) contrast(1.2);
+    border-left: var(--color-primary) solid 10px;
+}
+
+.card--team p {
+    padding: 0 15px;
+}
+
+.card--team .highlight {
+    font-weight: 600;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+/* Contáctanos */
+.about-container--contact-us {
+    background-color: #21211a;
+}
+
+.about-container--contact-us .about-section {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.about-container--contact-us h2 {
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0;
+}
+
+.contact-us--heading {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.contact-us__form {
+    width: 95%;
+    margin: 1 rem 0;
+}
+
+form .mb-3 {
+    margin: 1rem 0;
+    gap: 0;
+}
+
+.about-section .btn-solid {
+    margin: auto;
+}
+
+input,
+textarea {
+    color: var(--color-background);
+    font-weight: 500;
+    padding: 5px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
+
+input:focus,
+textarea:focus {
+    outline-color: var(--color-primary);
+}
+
+
+.btn-solid {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0;
+    background-color: var(--color-accent);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn-solid:hover,
+.btn-solid:active {
+    background-color: #7f211e;
+}
+
+/* ----------------------------------------- */
+/* ------------- MEDIA QUERIES ------------- */
+/* ----------------------------------------- */
+
+/* ------------ #media: tablet ------------- */
+
+@media (min-width: 768px) {
+
+    /* ------------ tablet-GENERAL ------------- */
+
+    /* ------ tablet-navbar ------ */
+    .main-navbar .offcanvas .offcanvas-body {
+        padding-top: 0;
+    }
+
+
+    .menu-toggle-icon,
+    .mobile-menu ul {
+        display: none;
+    }
+
+    .navbar-container {
+        padding: 15px 20px 15px 10px;
+    }
+
+    .desktop-menu {
+        display: block;
+        margin-left: 1rem;
+    }
+
+    .desktop-menu ul {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 10px;
+    }
+
+    .desktop-menu a {
+        font-size: 1.2rem;
+        color: #ddd;
+        font-weight: 400;
+    }
+
+    .page-selected a {
+        font-weight: 600;
+        color: #fff;
+    }
+
+    /* ------------ tablet-HOME ------------- */
+
+    /* ------ tablet-home-banner ------ */
+    .carousel__image--mobile {
+        display: none;
+    }
+
+    .carousel__image--desktop {
+        display: block;
+    }
+
+    /* ------ tablet-home-movies ------ */
+    .movies-preview {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        gap: 25px;
+    }
+
+    .home-movies-container {
+        margin: 0 3rem;
+    }
+
+    .movies-tabs__tab {
+        font-size: 1.125rem;
+        margin: 10px 5px;
+    }
+
+    /* ------------ tablet-ABOUT ------------- */
+    .about-container {
+        margin: 25px 30px 0 30px;
+    }
+
+    /* ------ tablet-about-banner ------ */
+    .wide-banner__slogan {
+        font-size: 2rem;
+    }
+
+    /* ------ tablet-about-content ------ */
+    .about-section__content {
+        display: flex;
+        gap: 1.5rem;
+        text-align: justify;
+    }
+
+    .about-section__content img {
+        width: max(40%, 300px);
+        object-fit: cover;
+        margin: 0;
+        border: var(--color-divider) solid 1px;
+    }
+
+    .about-section:nth-child(2) img {
+        order: 0;
+        /* Devuelve el orden natural (el del código) a la imagen de Misión*/
+    }
+
+    /* ------ tablet-about-team ------ */
+    .about-section__team .about-section__content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-top: 0.5rem;
+    }
+
+    /* Cards */
+    .about-section__team .card--team {
+        width: 280px;
+        margin: 0;
+    }
+
+    .card--team img {
+        box-sizing: border-box;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        margin-top: 0;
+        border: transparent;
+        /* deshace el border heredado */
+        border-left: var(--color-primary) solid 10px;
+    }
+
+    /* Contact Us */
+    .contact-us__form {
+        width: 600px;
+    }
+
+    /* GRID - LAYOUT (for Movies) */
+    .container {
+        display: grid;
+        margin: auto;
+        max-width: 1070px;
+        grid-template-columns: 225px 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "heading heading"
+            "sidebar content"
+    }
+
+    .heading {
+        grid-area: heading;
+        border-bottom: var(--color-divider) solid 1px;
+        /* divider, 1px*/
+    }
+
+    .heading h1 {
+        font-size: 3rem;
+        padding-top: 20px;
+    }
+
+    .movies-tabs--movies {
+        text-align: end;
+    }
+
+
+    .sidebar {
+        grid-area: sidebar;
+        ;
+        box-sizing: content-box;
+        padding-right: 20px;
+    }
+
+    .sidebar p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+
+    .sidebar details {
+        user-select: none;
+        /* Non-selectable element*/
+        border-bottom: var(--color-divider) solid 1px;
+        padding: 5px 0;
+        font-weight: 300;
+    }
+
+    .sidebar summary {
+        user-select: none;
+        /* Non-selectable element*/
+        font-weight: 600;
+        padding: 5px 0;
+    }
+
+    .sidebar details label {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .sidebar details input {
+        margin: 8px;
+        /* Separation of the checkbox */
+    }
+
+    .content {
+        grid-area: content;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        padding: 30px 10px 30px;
+        gap: 30px 10px;
+        border-left: var(--color-divider) solid 1px;
+    }
+
+    /* Movie Cards */
+    .my-card {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .card--movie {
+        width: 230px;
+        border-radius: 10px;
+        background-color: var(--color-surface);
+    }
+
+    .card--movie img {
+        width: 100%;
+        height: 370px;
+        object-fit: cover;
+        margin-bottom: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .card--movie .movie-info {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .card--movie h2 {
+        font-size: 1.4rem;
+    }
+
+    /* ------------ tablet-CINES ------------ */
+    .sort-by {
+        text-align: end;
+        margin-top: 0;
+        padding: 0 0 15px 0;
+    }
+
+    .sort-by--options {
+        display: flex;
+        justify-content: end;
+    }
+
+    /* ------------- tablet-PROMOCIONES ------------- */
+    .heading--promotions {
+        padding-bottom: 15px;
+    }
+
+    .content--promotions {
+        gap: 50px 20px;
+    }
+
+    .card--promotion {
+        margin: 0;
+    }
+
+    .card--promotion h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* ------------ #Media: Desktop ------------ */
+@media (min-width: 1024px) {
+
+    /* ------------ desktop-GENERAL ------------- */
+    /* ------ desktop-home-navbar ------ */
+    nav.main-navbar {
+        border-bottom: var(--color-divider) solid 1px;
+    }
+
+    /* -------------- desktop-HOME -------------- */
+    /* ------ desktop-home-banner ------ */
+    .carousel {
+        width: 1120px;
+        height: 450px;
+        margin: 2rem auto 2rem;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .carousel-inner,
+    .carousel-item {
+        height: 100%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border: none;
+        border-radius: 0;
+    }
+
+    /* ------ desktop-home-movies ------ */
+    .home-movies-container {
+        width: 960px;
+        margin: auto;
+    }
+
+    .movies-tabs__tab:hover {
+        box-sizing: border-box;
+        border-bottom: var(--color-divider) solid 3px;
+    }
+
+    .movies-preview__card img {
+        border-radius: 0;
+    }
+
+    .movies-preview {
+        display: grid;
+        height: 678px;
+        list-style: none;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        grid-template-columns: 6fr 3fr 2fr 2fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+            "xl m1 l  l"
+            "xl m1 l  l"
+            "xl m1 l  l"
+            "xl m2 l  l"
+            "xl m2 s1 s2"
+            "xl m2 s1 s2";
+    }
+
+    .movies-preview li:nth-child(1) {
+        grid-area: xl;
+    }
+
+    .movies-preview li:nth-child(2) {
+        grid-area: m1;
+    }
+
+    .movies-preview li:nth-child(3) {
+        grid-area: m2;
+    }
+
+    .movies-preview li:nth-child(4) {
+        grid-area: l;
+    }
+
+    .movies-preview li:nth-child(5) {
+        grid-area: s1;
+    }
+
+    .movies-preview li:nth-child(6) {
+        grid-area: s2;
+    }
+
+    .movies-preview li {
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .movies-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
+    /* ------------ desktop-ABOUT ------------- */
+    .about-container {
+        max-width: min(80%, 1200px);
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    /* ------ desktop-about-banner ------ */
+    .wide-banner {
+        height: 95vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .wide-banner__slogan {
+        font-size: 2.5rem;
+    }
+
+    .about-section__content img {
+        aspect-ratio: 3/2;
+        object-position: top center;
+    }
+
+    /* ------ desktop-about-team ------ */
+    .about-section__content .card--team img {
+        border: none;
+        aspect-ratio: 1/1;
+        filter: grayscale(1) contrast(1.2);
+    }
+
+    .about-section__content .card--team img:hover {
+        filter: grayscale(0) contrast(1.2);
+    }
+}

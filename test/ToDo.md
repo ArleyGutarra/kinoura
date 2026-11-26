@@ -12,7 +12,7 @@
 
 - Considerá sumar otro componente interactivo (modal o accordion) en una página secundaria para cubrir mejor el criterio de componentes.
 
-- Limpiá las carpetas test/, design**/ e inspo**/ o agregalas a .gitignore.
+- Limpiá las carpetas test/ a .gitignore.
 
 # Pre-Entrega 6
 
