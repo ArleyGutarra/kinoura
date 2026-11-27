@@ -1,0 +1,118 @@
+@use '../utilities/variables' as *;
+
+nav.main-navbar {
+    background-color: $color-background;
+    padding: 0 12px;
+
+    @media (min-width: $breakpoint-desktop) {
+        border-bottom: $color-divider solid 1px;
+    }
+}
+
+.navbar-brand img {
+    height: 1.6rem;
+}
+
+.nav-item {
+    border-radius: 15px;
+    transition: background-color 0.3s;
+
+    &:focus,
+    &:hover {
+        outline-color: $color-highlight;
+    }
+}
+
+.nav-link {
+    padding: 6px 8px;
+
+    &:focus {
+        outline-color: $color-highlight;
+    }
+}
+
+.navbar-nav .nav-link.active {
+    color: $color-font;
+}
+
+.navbar-collapse {
+    padding: 0.5rem 0;
+}
+
+/* Modifying Bootstrap variables*/
+.main-navbar .offcanvas {
+    --bs-offcanvas-width: min(85vw, 320px);
+    --bs-offcanvas-bg: $color-background;
+    --bs-offcanvas-color: $color-highlight;
+    background-color: $color-background;
+    color: $color-font;
+}
+
+.main-navbar .offcanvas .offcanvas-header {
+    border-bottom: 1px solid $color-divider;
+}
+
+.main-navbar .offcanvas .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.main-navbar .offcanvas .offcanvas-body {
+    padding-top: 1rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-top: 0;
+    }
+
+}
+
+button.navbar-toggler {
+    border: none;
+}
+
+nav.main-navbar.navbar.navbar-expand-md.bg-1 {
+    padding: 5px 0;
+}
+
+.offcanvas-title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.active {
+    color: $color-font;
+}
+
+// check this
+@media (min-width: $breakpoint-tablet) {
+
+    .menu-toggle-icon,
+    .mobile-menu ul {
+        display: none;
+    }
+
+    .navbar-container {
+        padding: 15px 20px 15px 10px;
+    }
+
+    .desktop-menu {
+        display: block;
+        margin-left: 1rem;
+    }
+
+    .desktop-menu ul {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 10px;
+    }
+
+    .desktop-menu a {
+        font-size: 1.2rem;
+        color: darken($color-font, 14%);
+        font-weight: 400;
+    }
+
+    .page-selected a {
+        font-weight: 600;
+        color: $color-font;
+    }
+}

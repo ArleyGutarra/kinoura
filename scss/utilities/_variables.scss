@@ -1,0 +1,22 @@
+// Colors
+$color-background: #101000;
+$color-surface: #2a2a2a;
+$color-divider: #808080;
+$color-primary: #7f211e;
+$color-accent: #e53935;
+$color-highlight: #fff;
+
+// Fonts
+$font-primary: "Montserrat", sans-serif;
+$color-font: #fff;
+
+// Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Gradients
+$overlay-gradient: linear-gradient(to bottom,
+            rgb(0 0 0 / 0.50) 0%,
+            rgb(0 0 0 / 0.20) 30%,
+            rgb(0 0 0 / 0.10) 100%);
+

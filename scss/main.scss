@@ -1,0 +1,17 @@
+// Command to activate Watch mode 
+// sass --watch ruta-main.scss ruta-styles.css
+
+// 1. Base (resets & typography)
+@use 'base/tipografia';
+@use 'base/base';
+
+// 2. Layout (structural chrome & page sections)
+@use 'layout/nav';
+@use 'layout/footer';
+
+// 3. Components (reusable UI pieces)
+@use 'components/buttons';
+@use 'components/cards';
+
+// 4. Pages (page-specific rules, if you add any)
+// @use 'pages/home';
