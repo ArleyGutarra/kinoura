@@ -6,7 +6,7 @@
 
 - Considerá aplicar **grid-template-areas** también en la sección compleja de **nosotros.html** para reforzar el criterio de grilla en más de una página.
 
-- Validar en el navegador a: 320px, 768px, 1024px
+- Validar en el navegador a: 320px, 768px, 1024px (SIEMPRE LO HAGO)
 
 # Pre-Entrega 5
 

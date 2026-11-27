@@ -1,0 +1,15 @@
+@use '../utilities/variables' as *;
+
+.btn-solid {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0;
+    background-color: $color-accent;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    &:hover,
+    &:active {
+        background-color: $color-primary;
+    }
+}
